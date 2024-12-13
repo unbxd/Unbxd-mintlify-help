@@ -1,0 +1,94 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Netcore Unbxd",
+  "logo": {
+    "dark": "/logo/dark.png",
+    "light": "/logo/light.png"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#fc5e01",
+    "light": "#fc5e01",
+    "dark": "#fc5e01",
+    "anchors": {
+      "from": "#fc5e01",
+      "to": "#fc5e01"
+    }
+  },
+
+  "font": {
+    "family": "Manrope",
+    "weight": 400
+  },
+  "topbarLinks": [
+    {
+      "name": "Login",
+      "url": "https://console.unbxd.io/"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Request Demo",
+    "url": "https://netcoreunbxd.com/demo",
+    "arrow": false
+  },
+  "topAnchor": {
+    "name": "Integrations",
+    "icon": "building"
+  },
+
+  "anchors": [
+    {
+      "name": "Webinars",
+      "icon": "video",
+      "url": "https://netcoreunbxd.com/webinars/"
+    },
+    {
+      "name": "Contact Us",
+      "icon": "headset",
+      "url": "https://netcoreunbxd.com/contact-us/"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://netcoreunbxd.com/blogs/"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Netcore Unbxd Analytics",
+      "pages": [
+        "./integrations/overview",
+        {
+          "group": "Analytics Integrations Method",
+          "pages": [
+            "./integrations/analytics-integration-overview",
+            {
+              "group": "Netcore Unbxd Pulse",
+              "pages": [
+                "./integrations/netcore-unbxd-pulse/what-is-pulse",
+                "./integrations/netcore-unbxd-pulse/search",
+                "./integrations/netcore-unbxd-pulse/browse",
+                "./integrations/netcore-unbxd-pulse/autosuggest"
+              ]
+            },
+            {
+              "group": "API Implementation",
+              "pages": [
+                "./integrations/api-implementation/overview",
+                "./integrations/api-implementation/api-call",
+                "./integrations/api-implementation/common-attributes",
+                "./integrations/api-implementation/event-specific-attributes",
+                "./integrations/api-implementation/autosuggest-events"
+              ]
+            },
+            "./integrations/javascript-implementation",
+            "./integrations/gtm-integration"
+          ]
+        }
+      ]
+    }
+  ],
+  "footerSocials": {
+    "linkedin": "https://www.linkedin.com/company/unbxd-inc"
+  }
+}

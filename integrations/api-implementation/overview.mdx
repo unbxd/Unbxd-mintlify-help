@@ -1,0 +1,34 @@
+<Info>💡 Integration method recommended by Netcore Unbxd experts.</Info>
+
+One of the ways you can implement Netcore Unbxd Analytics is with the help of APIs. Our API provides effortless, anonymous tracking of visitor behavior, enabling personalized search and category page results based on individual preferences. Additionally, the API powers comprehensive, site-level reporting for deeper insights.
+
+---
+
+### Things to Do Before API Integration (Prerequisites)
+
+#### Add the Common and Event-Specific Attributes
+
+To ensure a successful API implementation, it's essential to cross-verify or create the necessary attributes. These attributes fall into two categories:
+
+- **Common Attributes**: Applied universally across all events and critical for consistent tracking (e.g., `user ID`, `timestamp`).
+- **Event-Specific Attributes**: Unique to individual events, capturing details specific to an interaction (e.g., `product ID` for click events).
+
+For a detailed understanding of the API call, refer to the API documentation.
+
+#### Add Autosuggest Attributes
+
+If your autosuggest widget is powered by Netcore Unbxd, then you’ll need to fire a few additional events. These events enhance autosuggest accuracy and provide necessary reports.
+
+---
+
+### Pass the Request with the Following HTTP Headers
+
+| Parameter         | Description                                                                                                                                                                   | Significance                                                                 |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `user-agent`      | Browser identification information is passed to the webserver with every HTTPS request.                                                                                       | If not passed, device-based merchandising campaigns will not work.           |
+| `X-Forwarded-For` | Signifies the IP address of the end-user. This is required primarily if the integration is a backend process since Unbxd doesn’t get the IP of the end-user from the browser. | If not passed, segmentation, A/B testing, and personalization will not work. |
+
+<Note>
+  💡 Both common and event-specific attributes are mandatory. Attribute names
+  and types must exactly match those provided in the documentation.
+</Note>
