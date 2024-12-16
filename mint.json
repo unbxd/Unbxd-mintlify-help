@@ -55,36 +55,27 @@
   ],
   "navigation": [
     {
-      "group": "Netcore Unbxd Analytics",
+      "group": "",
       "pages": [
         "./integrations/overview",
         {
-          "group": "Analytics Integrations Method",
+          "group": "Analytics Integration Methods",
           "pages": [
-            "./integrations/analytics-integration-overview",
+            "./integrations/what-is-pulse",
             {
-              "group": "Netcore Unbxd Pulse",
+              "group": "API Integration",
               "pages": [
-                "./integrations/netcore-unbxd-pulse/what-is-pulse",
-                "./integrations/netcore-unbxd-pulse/search",
-                "./integrations/netcore-unbxd-pulse/browse",
-                "./integrations/netcore-unbxd-pulse/autosuggest"
+                "./integrations/api-integration/overview",
+                "./integrations/api-integration/common-attributes",
+                "./integrations/api-integration/event-specific-attributes",
+                "./integrations/api-integration/autosuggest-events"
               ]
             },
-            {
-              "group": "API Implementation",
-              "pages": [
-                "./integrations/api-implementation/overview",
-                "./integrations/api-implementation/api-call",
-                "./integrations/api-implementation/common-attributes",
-                "./integrations/api-implementation/event-specific-attributes",
-                "./integrations/api-implementation/autosuggest-events"
-              ]
-            },
-            "./integrations/javascript-implementation",
+            "./integrations/javascript-integration",
             "./integrations/gtm-integration"
           ]
-        }
+        },
+        "./integrations/compliance"
       ]
     }
   ],
