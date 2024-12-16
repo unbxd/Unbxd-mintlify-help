@@ -1,161 +1,112 @@
 ---
-title: Netcore Unbxd Analytics Overview
+title: Integrating Netcore Unbxd Analytics
 sidebarTitle: Overview
 ---
 
-<Note>
-  This document is intended exclusively for customers who have integrated with our V2 integration method. For details on versions of integrations, please refer to [ this documentation ](https://netcoreunbxd.com/docs/site-search/integration-documentation/introduction-analytics/).
-</Note>
+The following sections explain how Netcore Unbxd Analytics works and how to integrate it with your website. This document is **intended exclusively for customers who have integrated with our V2 integration method**. For details on versions of integrations, please refer to [ this documentation ](https://netcoreunbxd.com/docs/site-search/integration-documentation/introduction-analytics/).
 
 <Warning>
   As part of our ongoing upgrade process, we are gradually transitioning all customers to the new and improved SDKs. Please note that we will eventually deprecate support for the older SDK versions. To ensure you have access to the latest features and enhancements, we strongly encourage you to plan your migration to the upgraded SDK.
 </Warning>
 
-# Netcore Unbxd Analytics Overview
+## Why is it essential to set up Netcore Unbxd Analytics?
 
-Netcore Unbxd Analytics integrates with your website to track key events like:
+Analytics is crucial for maximizing the effectiveness of the Netcore Unbxd platform. By integrating Analytics, you add unique tracking codes to your store properties, which trigger interactions known as “events.” These events include actions like search queries, product clicks, impressions, cart additions, and orders, all of which are tracked for each visitor through browser cookies.
+This event data enables our AI/ML models to gain valuable insights and build detailed visitor profiles, highlighting their preferences for specific categories, brands, and prices.
 
-- Search queries
-- Product clicks
-- Impressions
-- Cart additions
-- Orders
+These profiles are vital for:
+- delivering personalized search results
+- enhancing recommendation algorithms for better product discovery
+- generating comprehensive reports
 
-<Info>
-  These events enable AI/ML models to generate insights, build visitor profiles,
-  and deliver personalized search results, recommendations, and reports.
-</Info>
+In summary, integrating Netcore Unbxd Analytics is crucial to achieving your conversion goals through precise personalization. Incomplete or broken analytics integration during or after onboarding leads to a diminished search experience, reduced relevance, and less effective personalized AI capabilities.
+
+## What are the types of events tracked?
+
+The trackers will capture your users' behavior as they navigate and interact with your online touchpoints.
 
 <AccordionGroup>
-  <Accordion title="Why is it essential to set up Netcore Unbxd Analytics?">
-    <p>Integrating Analytics helps you achieve conversion goals by:</p>
-    <ul>
-      <li>Delivering personalized search results</li>
-      <li>Enhancing product recommendation algorithms</li>
-      <li>Generating detailed reports</li>
-    </ul>
-    <Info>
-      Incomplete analytics integration leads to diminished search experience,
-      reduced relevance, and ineffective AI capabilities.
-    </Info>
+  <Accordion title="Global Events">
+    <p>These are standard interactions tracked across your entire site, such as Visitor, Page views, Product clicks, Product Cart, and Product Order.</p>
   </Accordion>
+
+{" "}
+
+<Accordion title="Feature-specific Events">
+  <p>
+    These track user interactions with specific features of your platform, such as Search, Product Impressions, Autosuggest, Category Pages, Browse Impressions, and Recommendations.
+  </p>
+</Accordion>
+
+{" "}
 </AccordionGroup>
 
----
-
-# Events: Overview
-
-The trackers capture user behavior across various touchpoints on your site.
+## What are the events we track?
 
 <Tabs>
-  <Tab title="Global Events">
-    <ul>
-      <li>Visitor</li>
-      <li>Page Views</li>
-      <li>Product Clicks</li>
-      <li>Cart Actions</li>
-      <li>Orders</li>
-    </ul>
-  </Tab>
-  <Tab title="Feature Events">
-    <ul>
-      <li>Search</li>
-      <li>Product Impressions</li>
-      <li>Autosuggest</li>
-      <li>Category Pages</li>
-      <li>Browse Impressions</li>
-      <li>Recommendations</li>
-    </ul>
-  </Tab>
-</Tabs>
+  <Tab title="Visitor Event">
+    <p>The first event created when a shopper visits your site. It tracks and builds profiles using browser cookies for two types of visitors: **first-time users** and **repeat users**.</p>
 
----
-
-# Events We Track
-
-<AccordionGroup>
-  <Accordion title="Visitor Event" description="Tracks visitor profiles">
-    <p>Triggered when a shopper visits your site, tracking:</p>
+    <p>Site-level information are stored as cookies and are titled as, </p>
     <ul>
       <li>User ID: <code>unbxd.userId</code></li>
       <li>Visit ID: <code>unbxd.visitId</code></li>
       <li>Visit Type: <code>unbxd.visit</code></li>
     </ul>
-  </Accordion>
-
-{" "}
-
-<Accordion title="Search Hit" description="Triggered by search activity">
-  <p>
-    Records every search query, including no-result queries, providing insights
-    into search effectiveness.
-  </p>
-</Accordion>
-
-{" "}
-
-<Accordion title="Product Click" description="Tracks product interactions">
-  <p>Triggered when a shopper clicks a product or its image on:</p>
-  <ul>
-    <li>Product Listing Pages (PLP)</li>
-    <li>Category Pages</li>
-    <li>Recommendation Widgets</li>
-  </ul>
-  <p>
-    This data powers 'Popular Products' and personalized 'Recommended For You'
-    lists.
-  </p>
-</Accordion>
-
-{" "}
-
-<Accordion title="Add to Cart" description="Tracks cart additions">
-  <p>
-    Triggered when a shopper adds a product to the cart. For incremental
-    additions, the event fires once per addition, with <code>qty</code>{" "}
-    reflecting the added quantity.
-  </p>
-</Accordion>
-
-  <Accordion title="Order" description="Tracks completed purchases">
-    <p>Fires for each purchased product, capturing:</p>
-    <ul>
-      <li>Product ID</li>
-      <li>Quantity</li>
-      <li>Order details</li>
-    </ul>
-  </Accordion>
-</AccordionGroup>
-
----
-
-<CalloutGroup>
-  <Tip>
-    Track these events to optimize product discovery and shopping experiences.
-  </Tip>
-</CalloutGroup>
-
----
-
-<Tabs>
-  <Tab title="Search Events">
-    <ul>
-      <li>Search Hit</li>
-      <li>Search Impression</li>
-      <li>Facets</li>
-    </ul>
   </Tab>
-  <Tab title="Browse Events">
-    <ul>
-      <li>Category Page Hit</li>
-      <li>Category Impression</li>
-      <li>Product View</li>
-    </ul>
-  </Tab>
-  <Tab title="Recommendation Events">
-    <ul>
-      <li>Recommendation Impression</li>
-      <li>Product Click</li>
-    </ul>
+
+<Tab title="Search Hit">
+  <p>
+   Triggered when a shopper uses the search bar to find a product on your site or selects one of the suggestions provided by Netcore Unbxd's Autosuggest widget.
+   
+   It captures every query the shopper searches, even if no results are returned, providing insights into search effectiveness.
+  </p>
+</Tab>
+
+<Tab title="Product Click">
+  <p>
+  Triggered whenever a shopper clicks a product or product image from any Product Listing Page (PLP), Category page, or Recommendation widget. It will capture the clicked product’s unique ID and the page where the click activity occurred.
+
+This data can be used to highlight ‘Popular Products’ and create personalized ‘Recommended For You’ lists, ensuring a more customized shopping experience.
+</p>
+</Tab>
+
+<Tab title="Add to Cart">
+  <p>
+    Triggered each time a user adds a product to their cart, regardless of the originating page—whether it’s the Product Detail Page (PDP), Product Listing Page (PLP), historical orders, or any other page. 
+For users incrementally adding products, the event should fire once per product addition, and the <code>qty</code> parameter should reflect the quantity added during that specific action.
+  </p>
+</Tab>
+
+  <Tab title="Order">
+    <p> Triggered when a purchase is completed on your site. This event should be fired for each product in the order, capturing valuable data such as the product ID, quantity, and order details.</p>
   </Tab>
 </Tabs>
+
+## How to integrate Netcore UNBXD Analytics?
+
+The Netcore Unbxd Analytics tracker must be integrated on every page and version of your site, including desktop, mobile, and tablet.
+
+<Info>
+  We provide multiple integration options, each designed to meet specific technical requirements and business needs.
+</Info>
+
+Here’s an overview of the implementation methods available:
+
+<CardGroup cols={2}>
+  <Card title="Netcore Unbxd Pulse (Recommended)" icon="thumbs-up" href="/integrations/netcore-unbxd-pulse/what-is-pulse">
+    Simplify Analytics Integration by adding just one line of code to your site and letting Netcore Unbxd experts handle the rest.
+  </Card>
+  <Card title="API Implementation (Recommended)" icon="webhook" href="https://learn-more-link.com">
+    With this method, you integrate the API references for each event that needs to be tracked. It is particularly suitable for businesses that require a high level of customization.
+  </Card>
+  <Card title="JavaScript Implementation" icon="js" href="https://learn-more-link.com">
+   This method allows embedding the tracker as a custom Javascript file, anywhere within the HTML pages in your site.
+  </Card>
+  <Card title="Tag Manager Implementation" icon="tag" href="https://learn-more-link.com">
+    If your website uses a tag manager such as GTM (Google Tag Manager) or Tealium, you can use your tag manager to easily place the tracker in your site.
+  </Card>
+  <Card title="Native app SDKs" icon="paperclip" href="https://learn-more-link.com">
+    With just a few lines of code, you can embed our SDKs into your app and start capturing data in real-time.
+  </Card>
+</CardGroup>
