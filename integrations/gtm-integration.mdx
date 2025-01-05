@@ -372,6 +372,42 @@ When a user selects and submits a suggestion from the Autosuggest widget, the re
 
 For Google Tag Manager (GTM) implementation, whenever a suggestion is selected from the Autosuggest box, the following events should be fired, sending relevant metadata in the payload.
 
+#### KEYWORD_SUGGESTION
+
+Payload details:
+| **Attribute Name**        | **Datatype** | **What Value to Be Passed**                                                               |
+|----------------------------|-------------|-------------------------------------------------------------------------------------------|
+| `autosuggest_type`        | `string`    | `KEYWORD_SUGGESTION`, usually the same as the value of the `doctype` field in Unbxd autosuggest API. |
+| `autosuggest_suggestion`  | `string`    | Suggested query in keyword.                                                              |
+| `field_name`              | `string`    | In case of `KEYWORD` suggestions, the name of the field used for the suggestion.          |
+| `field_value`             | `string`    | In case of `KEYWORD` suggestions, the value of the field, which is the suggestion.        |
+| `src_field`               | `string`    | Source field, can be passed empty.                                                       |
+| `internal_query`          | `string`    | The typed query in the search box, which led to the suggestions in autosuggest.           |
+
+```javascript
+Refer to the following code snippet:
+<script type="text/javascript">
+   document.getElementById('input_form_id').addEventListener('submit', function(event) {
+   var searchQuery = document.getElementById('myInput').value;
+   if (searchQuery.length >= 1) {
+       window.dataLayer = window.dataLayer || [];
+       window.dataLayer.push({
+           'event': 'AutosuggestSearchTrigger',
+           'AutosuggestSearchPayload':{
+               'query': '{{suggested-query}}',
+               'autosuggestParams': {
+                   'autosuggest_type': 'KEYWORD_SUGGESTION',
+                   'autosuggest_suggestion': '{{suggestion}}',
+             'unbxdprank': '{{rank-of-product}}',
+                   'internal_query': '{{original-query}}'
+               }
+             }
+       });
+   }
+   });
+</script>
+```
+
 #### IN_FIELD
 
 Payload details:
@@ -411,76 +447,6 @@ Refer to the following code snippet:
 </script>
 ```
 
-#### POPULAR_PRODUCTS
-
-Payload details:
-| **Attribute Name**        | **Datatype** | **What Value to Be Passed**                                                               |
-|----------------------------|-------------|-------------------------------------------------------------------------------------------|
-| `query`                   | `string`    | Title of the product.                                                                     |
-| `autosuggest_type`        | `string`    | `POPULAR_PRODUCTS`, usually the same as the value of the `doctype` field in Unbxd autosuggest API. |
-| `pid`                     | `string`    | Unique ID of the selected popular product.                                                |
-| `unbxdprank`              | `string`    | In case of `POPULAR_PRODUCTS` suggestions, the rank of the product.                       |
-| `internal_query`          | `string`    | The typed query in the search box, which led to the suggestions in autosuggest.           |
-
-Refer to the following code snippet:
-```javascript
-<script type="text/javascript">
-   document.getElementById('input_form_id').addEventListener('submit', function(event) {
-   var searchQuery = document.getElementById('myInput').value;
-   if (searchQuery.length >= 1) {
-       window.dataLayer = window.dataLayer || [];
-       window.dataLayer.push({
-           'event': 'AutosuggestSearchTrigger',
-           'AutosuggestSearchPayload':{
-               'query': '{{title-of-product}}',
-               'autosuggestParams': {
-                'autosuggest_type': 'POPULAR_PRODUCTS',
-                'pid': '{{uniqueId-of-the-product}}',
-                'unbxdprank': '{{rank-of-product}}',
-                'internal_query': '{{original-query}}'
-               }
-             }
-       });
-   }
-   });
-</script>
-```
-
-#### KEYWORD_SUGGESTION
-
-Payload details:
-| **Attribute Name**        | **Datatype** | **What Value to Be Passed**                                                               |
-|----------------------------|-------------|-------------------------------------------------------------------------------------------|
-| `autosuggest_type`        | `string`    | `KEYWORD_SUGGESTION`, usually the same as the value of the `doctype` field in Unbxd autosuggest API. |
-| `autosuggest_suggestion`  | `string`    | Suggested query in keyword.                                                              |
-| `field_name`              | `string`    | In case of `KEYWORD` suggestions, the name of the field used for the suggestion.          |
-| `field_value`             | `string`    | In case of `KEYWORD` suggestions, the value of the field, which is the suggestion.        |
-| `src_field`               | `string`    | Source field, can be passed empty.                                                       |
-| `internal_query`          | `string`    | The typed query in the search box, which led to the suggestions in autosuggest.           |
-
-```javascript
-Refer to the following code snippet:
-<script type="text/javascript">
-   document.getElementById('input_form_id').addEventListener('submit', function(event) {
-   var searchQuery = document.getElementById('myInput').value;
-   if (searchQuery.length >= 1) {
-       window.dataLayer = window.dataLayer || [];
-       window.dataLayer.push({
-           'event': 'AutosuggestSearchTrigger',
-           'AutosuggestSearchPayload':{
-               'query': '{{suggested-query}}',
-               'autosuggestParams': {
-                   'autosuggest_type': 'KEYWORD_SUGGESTION',
-                   'autosuggest_suggestion': '{{suggestion}}',
-             'unbxdprank': '{{rank-of-product}}',
-                   'internal_query': '{{original-query}}'
-               }
-             }
-       });
-   }
-   });
-</script>
-```
 #### TOP_SEARCH_QUERIES
 
 Payload details:
@@ -507,42 +473,6 @@ Refer to the following code snippet:
                'query': '{{suggested-query}}',
                'autosuggestParams': {
                    'autosuggest_type': 'TOP_SEARCH_QUERIES',
-                   'autosuggest_suggestion': '{{suggestion}}',
-                   'internal_query': '{{original-query}}',
-            'unbxdprank': '{{rank-of-product}}',
-               }
-             }
-       });
-   }
-   });
-</script>
-```
-
-#### POPULAR_PRODUCTS_FILTERED
-
-Payload details:
-| **Attribute Name**        | **Datatype** | **What Value to Be Passed**                                                               |
-|----------------------------|-------------|-------------------------------------------------------------------------------------------|
-| `query`                   | `string`    | Title of the product.                                                                    |
-| `autosuggest_type`        | `string`    | `POPULAR_PRODUCTS_FILTERED` depending on the type of suggestion, usually the same as the value of the `doctype` field in Unbxd autosuggest API. |
-| `autosuggest_suggestion`  | `string`    | Suggested query in Infield.                                                              |
-| `internal_query`          | `string`    | The typed query in the search box, which led to the suggestions in autosuggest.           |
-| `unbxdprank`              | `string`    | In case of `POPULAR_PRODUCTS` suggestions, the rank of the product.                      |
-
-
-Refer to the following code snippet:
-```javascript
-<script type="text/javascript">
-   document.getElementById('input_form_id').addEventListener('submit', function(event) {
-   var searchQuery = document.getElementById('myInput').value;
-   if (searchQuery.length >= 1) {
-       window.dataLayer = window.dataLayer || [];
-       window.dataLayer.push({
-           'event': 'AutosuggestSearchTrigger',
-           'AutosuggestSearchPayload':{
-               'query': '{{suggested-query}}',
-               'autosuggestParams': {
-                   'autosuggest_type': 'POPULAR_PRODUCTS_FILTERED',
                    'autosuggest_suggestion': '{{suggestion}}',
                    'internal_query': '{{original-query}}',
             'unbxdprank': '{{rank-of-product}}',
@@ -679,5 +609,76 @@ Refer to the following code snippet:
       });
   }
   });
+</script>
+```
+
+#### POPULAR_PRODUCTS
+
+Payload details:
+| **Attribute Name**        | **Datatype** | **What Value to Be Passed**                                                               |
+|----------------------------|-------------|-------------------------------------------------------------------------------------------|
+| `query`                   | `string`    | Title of the product.                                                                     |
+| `autosuggest_type`        | `string`    | `POPULAR_PRODUCTS`, usually the same as the value of the `doctype` field in Unbxd autosuggest API. |
+| `pid`                     | `string`    | Unique ID of the selected popular product.                                                |
+| `unbxdprank`              | `string`    | In case of `POPULAR_PRODUCTS` suggestions, the rank of the product.                       |
+| `internal_query`          | `string`    | The typed query in the search box, which led to the suggestions in autosuggest.           |
+
+Refer to the following code snippet:
+```javascript
+<script type="text/javascript">
+   document.getElementById('input_form_id').addEventListener('submit', function(event) {
+   var searchQuery = document.getElementById('myInput').value;
+   if (searchQuery.length >= 1) {
+       window.dataLayer = window.dataLayer || [];
+       window.dataLayer.push({
+           'event': 'AutosuggestSearchTrigger',
+           'AutosuggestSearchPayload':{
+               'query': '{{title-of-product}}',
+               'autosuggestParams': {
+                'autosuggest_type': 'POPULAR_PRODUCTS',
+                'pid': '{{uniqueId-of-the-product}}',
+                'unbxdprank': '{{rank-of-product}}',
+                'internal_query': '{{original-query}}'
+               }
+             }
+       });
+   }
+   });
+</script>
+```
+
+#### POPULAR_PRODUCTS_FILTERED
+
+Payload details:
+| **Attribute Name**        | **Datatype** | **What Value to Be Passed**                                                               |
+|----------------------------|-------------|-------------------------------------------------------------------------------------------|
+| `query`                   | `string`    | Title of the product.                                                                    |
+| `autosuggest_type`        | `string`    | `POPULAR_PRODUCTS_FILTERED` depending on the type of suggestion, usually the same as the value of the `doctype` field in Unbxd autosuggest API. |
+| `autosuggest_suggestion`  | `string`    | Suggested query in Infield.                                                              |
+| `internal_query`          | `string`    | The typed query in the search box, which led to the suggestions in autosuggest.           |
+| `unbxdprank`              | `string`    | In case of `POPULAR_PRODUCTS` suggestions, the rank of the product.                      |
+
+
+Refer to the following code snippet:
+```javascript
+<script type="text/javascript">
+   document.getElementById('input_form_id').addEventListener('submit', function(event) {
+   var searchQuery = document.getElementById('myInput').value;
+   if (searchQuery.length >= 1) {
+       window.dataLayer = window.dataLayer || [];
+       window.dataLayer.push({
+           'event': 'AutosuggestSearchTrigger',
+           'AutosuggestSearchPayload':{
+               'query': '{{suggested-query}}',
+               'autosuggestParams': {
+                   'autosuggest_type': 'POPULAR_PRODUCTS_FILTERED',
+                   'autosuggest_suggestion': '{{suggestion}}',
+                   'internal_query': '{{original-query}}',
+            'unbxdprank': '{{rank-of-product}}',
+               }
+             }
+       });
+   }
+   });
 </script>
 ```

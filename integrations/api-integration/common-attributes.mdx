@@ -15,6 +15,8 @@ For a consistent experience across all devices and browsers, you can use your lo
 
 **How to generate userId?**
 
+To handle session management effectively across multiple platforms with a shared catalog and user base, businesses must maintain a mapping system that links each user to a unique identifier 'uid'. This ensures consistent tracking and seamless user experiences across platforms.
+
 1. Default Behavior: 
 `var uid = 'uid-' + date.getTime() + '-' + Math.floor(Math.random() * 100000);`
 2. For Logged-in Users: 
