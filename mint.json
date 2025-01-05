@@ -31,10 +31,16 @@
     "url": "https://netcoreunbxd.com/demo",
     "arrow": false
   },
-  "topAnchor": {
-    "name": "Integrations",
-    "icon": "building"
-  },
+
+  "tabs": [
+    {
+        "name": "Onboarding",
+        "url": "/integrations/overview/"
+    }
+],
+"primaryTab": {
+    "name": "Onboarding"
+},
 
   "anchors": [
     {
@@ -56,6 +62,10 @@
   "navigation": [
     {
       "group": "",
+        "pages": ["./onboarding/react-sdk"]
+    },
+    {
+      "group": "V2 Analytics Integration",
       "pages": [
         "./integrations/overview",
         {

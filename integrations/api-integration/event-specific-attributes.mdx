@@ -91,7 +91,7 @@ Payload details:
 
 | **Attribute Name** | **Type**      | **Value to Pass**                                                                                  |
 |---------------------|---------------|----------------------------------------------------------------------------------------------------|
-| `action`           | `string`      | `cart`                                                                                           |
+| `action`           | `string`      | `search_impression`                                                                                           |
 | `pid`              | `string`      | Unique ID for the product, to be taken from the search API response                              |
 | `variantId` (optional)| `string`  | Variant ID assigned to the variant of the product. Necessary only if variants are present.       |
 | `url`              | `string`      | Website URL where the search is performed                                                       |
@@ -126,7 +126,7 @@ Payload details:
 
 | **Attribute Name**   | **Type**      | **Value to Pass**                                                                                  |
 |-----------------------|---------------|----------------------------------------------------------------------------------------------------|
-| `action`             | `string`      | `cart`                                                                                           |
+| `action`             | `string`      | `browse_impression`                                                                                           |
 | `pid`                | `string`      | Unique ID for the product, to be taken from the search API response                              |
 | `qty`                | `string`      | The number of units added to the cart (as a string). For example, `“2”` for 2 units.             |
 | `variantId` (optional)| `string`     | Variant ID assigned to the variant of the product. Necessary only if variants are present.       |
@@ -212,7 +212,7 @@ Payload details:
 
 | **Attribute Name**   | **Type**      | **Value to Pass**                                                                                  |
 |-----------------------|---------------|----------------------------------------------------------------------------------------------------|
-| `action`             | `string`      | `cart`                                                                                           |
+| `action`             | `string`      | `facets`                                                                                           |
 | `pid`                | `string`      | Unique ID for the product, to be taken from the search API response                              |
 | `qty`                | `string`      | The number of units added to the cart (as a string). For example, `“2”` for 2 units.             |
 | `variantId` (optional)| `string`     | Variant ID assigned to the variant of the product. Necessary only if variants are present.       |
@@ -266,7 +266,7 @@ http://tracker.unbxdapi.com/v2/1p.jpg
 Payload details:
 | **Attribute Name**   | **Type**      | **Value to Pass**                                                                                  |
 |-----------------------|---------------|----------------------------------------------------------------------------------------------------|
-| `action`             | `string`      | `cart`                                                                                           |
+| `action`             | `string`      | `facets`                                                                                           |
 | `pid`                | `string`      | Unique ID for the product, to be taken from the search API response                              |
 | `qty`                | `string`      | The number of units added to the cart (as a string). For example, `“2”` for 2 units.             |
 | `variantId` (optional)| `string`     | Variant ID assigned to the variant of the product. Necessary only if variants are present.       |
