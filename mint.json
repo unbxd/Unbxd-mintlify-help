@@ -62,7 +62,8 @@
   "navigation": [
     {
       "group": "",
-        "pages": ["./onboarding/react-sdk"]
+        "pages": ["./onboarding/react-sdk",
+      "./onboarding/js-sdk"]
     },
     {
       "group": "V2 Analytics Integration",
