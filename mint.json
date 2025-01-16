@@ -36,7 +36,11 @@
     {
         "name": "Onboarding",
         "url": "/integrations/overview/"
-    }
+    },
+    {
+      "name": "User Guides",
+      "url": "user-guides"
+  }
 ],
 "primaryTab": {
     "name": "Onboarding"
@@ -88,6 +92,27 @@
         },
         "./integrations/compliance"
       ]
+    },
+    {
+        "group": "Merchandising Workbench",
+        "pages": ["./user-guides/merchandising/introduction", 
+        {
+          "group": "Promote Products",
+          "pages": [
+            "./user-guides/merchandising/promotions/overview",
+            "./user-guides/merchandising/promotions/global-rule",
+            "./user-guides/merchandising/promotions/add-promotions",
+            "./user-guides/merchandising/promotions/boost",
+            "./user-guides/merchandising/promotions/pin",
+            "./user-guides/merchandising/promotions/sort",
+            "./user-guides/merchandising/promotions/slot",
+            "./user-guides/merchandising/promotions/filter"
+          ]
+        },
+        "./user-guides/merchandising/banners", 
+        "./user-guides/merchandising/facets", 
+        "./user-guides/merchandising/redirects", 
+        "./user-guides/merchandising/autosuggest"]
     }
   ],
   "footerSocials": {

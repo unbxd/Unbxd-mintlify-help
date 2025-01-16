@@ -81,7 +81,7 @@ https://tracker.unbxdapi.com/v2/1p.jpg
 "visit_type":"{{first_or_repeat}}",
 "visitId":"{{visit-id}}"}
 &UnbxdKey={{unbxd-sitekey}}
-&action=search_impression
+&action=PRODUCT_IMPRESSIONS
 &uid={{uid}}
 &t=1662366285967|0.7498946341398707
 ```
@@ -91,7 +91,7 @@ Payload details:
 
 | **Attribute Name** | **Type**      | **Value to Pass**                                                                                  |
 |---------------------|---------------|----------------------------------------------------------------------------------------------------|
-| `action`           | `string`      | `search_impression`                                                                                           |
+| `action`           | `string`      | `PRODUCT_IMPRESSIONS`                                                                                           |
 | `pid`              | `string`      | Unique ID for the product, to be taken from the search API response                              |
 | `variantId` (optional)| `string`  | Variant ID assigned to the variant of the product. Necessary only if variants are present.       |
 | `url`              | `string`      | Website URL where the search is performed                                                       |
@@ -116,7 +116,7 @@ https://tracker.unbxdapi.com/v2/1p.jpg
 "visit_type":"{{first_or_repeat}}",
 "visitId":"{{visit-id}}"}
 &UnbxdKey={{unbxd-sitekey}}
-&action=browse_impression
+&action=PRODUCT_IMPRESSIONS
 &uid={{uid}}
 &t=1662366068017|0.9865798147898728
 ```
@@ -126,7 +126,7 @@ Payload details:
 
 | **Attribute Name**   | **Type**      | **Value to Pass**                                                                                  |
 |-----------------------|---------------|----------------------------------------------------------------------------------------------------|
-| `action`             | `string`      | `browse_impression`                                                                                           |
+| `action`             | `string`      | `PRODUCT_IMPRESSIONS`                                                                                           |
 | `pid`                | `string`      | Unique ID for the product, to be taken from the search API response                              |
 | `qty`                | `string`      | The number of units added to the cart (as a string). For example, `“2”` for 2 units.             |
 | `variantId` (optional)| `string`     | Variant ID assigned to the variant of the product. Necessary only if variants are present.       |
