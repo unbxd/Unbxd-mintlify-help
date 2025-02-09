@@ -34,10 +34,6 @@
 
   "tabs": [
     {
-        "name": "Onboarding",
-        "url": "/integrations/overview/"
-    },
-    {
       "name": "User Guides",
       "url": "user-guides"
   }
