@@ -14,7 +14,7 @@
         "tab": "Onboarding",
         "groups": [
           {
-            "group": "",
+            "group": "Onboarding",
             "pages": [
               "onboarding/react-sdk",
               "onboarding/js-sdk"
