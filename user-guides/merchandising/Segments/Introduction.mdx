@@ -69,10 +69,14 @@ To create a segment:
 
 1. Go to _Merchandising \> Segments \> Add Segment_
 2. Provide the name of your segment in the **Add Segment Name** box at the top.
-3. Set up the attributes in the next block. You can set up a maximum of 6 attributes, which includes one default attribute and five custom attribute.\
-   \
-   In the Create Segment page, at the **Select contact type** option, select the List(s)/Segment(s) or Contact set out of which you want to create the segment.
-4. 
-5. Select the conditions of \<\<glossary:segmentation\>\> as required. Select **AND** or **OR** based on your requirement.
-6. To add a block, click **ADD BLOCK**.
-7. Click on the dropdown to select an **attribute** or **event**.
+3. Set up the attributes in the next block. You can set up a maximum of 6 attributes, which includes one default attribute and five custom attributes.\
+   Default attributes:
+   1. Location: Any number of locations can be added. This does not have a limit.
+   2. Visit Type: Choose between new and repeated users. You can select one or both.
+   3. Devices: Select the devices you wish to target from the available options. This does not have a limit.
+
+   Custom attributes:
+
+   You can add up to three custom attributes in addition to the default ones per segment. You may configure these custom attributes with any value you choose and pass them through the search API. You can only pass one value for each custom attribute. Ensure to include the "exact custom attribute" in your search/browse request. After creation, Unbxd passes these attribute values in the search API.
+4. Select the "save segment" button.
+5. 
