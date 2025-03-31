@@ -45,18 +45,17 @@ You can add up to five custom attributes in addition to the default ones per seg
 
 \
 Priority order is critical in order to resolve the conflict between the different segments.\
-The priority order of selecting a segment in one or more matching attributes is available between two segments.\
-1) Unbxd Default: Location
+The priority order of selecting a segment in one or more matching attributes is available between two segments.
 
-2) Unbxd Default: Device Type
-
-3) Unbxd Default: Visit Type
+1. Unbxd Default: Location
+2. Unbxd Default: Device Type
+3. Unbxd Default: Visit Type
 
 ### Use Case:
 
-A segment is created for Spain (location) with the name **Spain_users**. Another segment is exclusively meant for New Shoppers with the name **New\_**[**Shoppers**. ](http://Shoppers.In)If a new shopper comes from Spain, both segments will be applicable. 
+A segment is created for Spain (location) with the name **Spain_users**. Another segment is exclusively meant for New Shoppers with the name **New\_**[**Shoppers. **](http://Shoppers.In)If a new shopper comes from Spain, both segments will be applicable.
 
 **Question**: which segment should be chosen by Unbxd?\
 \
 **Solution**: Unbxd will resolve the issue based on the priority of the segmentable attributes configured by the user. \
-Unbxd Default Location is ranked above Unbxd Default visit type, so in the above use case, **Spain_users **segmentation will be applied.
+Unbxd Default Location is ranked above Unbxd Default visit type, so in the above use case, \*\*Spain_users \*\*segmentation will be applied.
