@@ -1,5 +1,5 @@
 ---
-title: "New file"
+title: "Vector Search "
 description: "Description of your new file."
 ---
 
@@ -10,9 +10,10 @@ description: "Description of your new file."
 1. Navigate to Unbxd console \> Algorithm \> Intent \> Vector Search
 2. Click on the "Contact support" link, which will auto create a ticket for enabling this feature at the product end for approval. Post that the toggle button will be in an active state for the customer.
 3. Once the feature is enabled, the Customer is set to use the Vector search for the search-related queries. You need to set up the strategy at your end for Hybrid search and FallBack search as below:
-4. If the search keyword = 3 example "white heel shoes"
 
    ![Vector Search1 Pn](/images/VectorSearch1.png)
+
+   Since Vector Search works best with long-tailed queries, you need to manually set up the minimum number of words for Vector Search to be activated.
 
    For Example
 
@@ -22,13 +23,20 @@ description: "Description of your new file."
      **Fallback Search** ensures that if the traditional search doesn’t return relevant results, the system will revert to vector search.
    </Info>
 
+#### Use Case
+
+|                                           | **Traditional flow**                                                                                                 | **Traditional search \+ Vector Search **                                                                                                                                                                                                                                            |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Hybrid Strategy using Vector Search**   | If a user types "red dress" in the search bar. Traditionally, the search result will give, for example, 15 products. | If vector search is enabled, the search can also surface products that are red but described as “crimson” or “ruby” in their listings. This helps ensure that search results are semantically relevant, even if the keywords don't match exactly and the search result could be 40. |
+| **Fallback strategy using Vector Search** | If a user types "running shoes" and the search result gives 10                                                       | The minimum number of products for which the fallback model will activate vector seach is 10, then automatically vector search gets activated and gives your search result an extra 20 products for the keyword "running shoes"                                                     |
+
+If a user types "red dress" in the search bar, the vector search can also surface products that are red but described as “crimson” or “ruby” in their listings. This helps ensure that search results are semantically relevant, even if the keywords don't match exactly.
+
+Hybrid Search using Vector Search:
+
 #### What to Expect After Enabling
 
 - After the feature is enabled, **Vector Search** will become available for your search queries.
 - The system will automatically handle the vectorization of product data and user queries, and search results will be ranked based on semantic meaning rather than exact keyword matches, offering more accurate and contextually relevant products to your users.
 
-#### Use Case
-
-If a user types "red dress" in the search bar, the vector search can also surface products that are red but described as “crimson” or “ruby” in their listings. This helps ensure that search results are semantically relevant, even if the keywords don't match exactly.
-
-Hybrid Search using Vector Search:
+#### 
