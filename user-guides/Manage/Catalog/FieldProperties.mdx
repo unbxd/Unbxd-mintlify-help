@@ -79,3 +79,34 @@ Follow these steps to configure your fields and enable necessary features:
 2. **Bulk Enable Features**: Click on the **Action** button and from the dropdown, click on **"Bulk Enable Features"**. A pop-up will appear where you can select the feature (e.g., **"Merchandisable"**, **"Facetable"**, or **"Autosuggest"**).
 3. Click **Bulk Enable** to activate the features for the selected fields.
 4. **Bulk Disable Features**: If you need to disable a feature for a field, follow the same steps and select **Bulk Disable Features** from the dropdown menu.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My Feed Attribute is Missing in the Drop-down" icon="sparkles" iconType="solid">
+    If you encounter a situation where an attribute is missing from a dropdown (e.g., when configuring rules, facets, or promotions), follow these steps to resolve the issue:\
+    **Refresh Fields**:\
+    Navigate to **Manage \> Catalog \> Field Properties** and click on the **refresh icon** to reload the field properties. Wait for 10 seconds.
+
+    1. **Check for Missing Attribute**:\
+       Search for the attribute in the table. If it's not listed, it means the attribute is not present in the current feed.
+    2. **Update the Feed**:\
+       If the attribute is missing, initiate a new feed containing the required attribute. Wait for the indexing cycle to complete.
+    3. **Sync the Feed**:\
+       After the feed is indexed, click on the **refresh icon** again to ensure the attribute is updated.
+    4. **Tag the Attribute**:\
+       Once the attribute is available, tag it with the appropriate property for the dropdown context.
+    5. **Check the Dropdown**:\
+       Go back to the dropdown, and the missing attribute should now be available.
+  </Accordion>
+  <Accordion title=" Importing Fields with Errors" icon="sparkles" iconType="solid">
+    If you receive an error during import:
+
+    - **Check for Format Issues**: Ensure the file format is correct (CSV or Excel) and the required columns (e.g., Field Name, Feature Tag, Enabled) are included.
+    - **Feature Tag Mismatch**: Verify that the feature tags in the import file match the predefined tags in the system (e.g., **Merchandisable**, **Facetable**, **Autosuggest**).
+    - **Missing Fields**: If a field mentioned in the import file does not exist in the catalog, ensure that the field is created first before importing the configuration.
+  </Accordion>
+  <Accordion title="Exported File Contains Missing Data" icon="sparkles" iconType="sharp-solid">
+    If certain fields or configurations are missing from the exported file:  Refresh Field Config Page: Refresh the page and try exporting again.  Check for Permissions: Ensure you have the necessary permissions to export field configurations.
+  </Accordion>
+</AccordionGroup>
