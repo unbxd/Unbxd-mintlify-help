@@ -16,21 +16,20 @@ This feature empowers you to perform precise searches based on measurable produc
    | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | Boost    | In this mode, products within the specified measurement range are given higher prominence in search results. For example, if a shopper searches for a washing machine with a capacity of 7 kg, and only 7.5 kg machines are in stock, the 7.5 kg models will be boosted in the search results. |
    | Filter   | In this mode, the measurement-related attributes (e.g., size, weight, dimensions) are identified and exact same products are filtered in the search result.                                                                                                                                    |
-5. Configure Attributes : This section enables search using measurable attributes as below:
+5. Configure Attributes: This section enables search using measurable attributes. You must select the attributes from the catalog and map the dimensions and units accordingly. You can add up to 5 attributes per dimension type. Currently we support following units:
 
-   | Attribute | Dimension | Unit |
-   | --------- | --------- | ---- |
-   |           |           |      |
-   |           |           |      |
+   | Dimension    | Unit                                                                                                             |
+   | ------------ | ---------------------------------------------------------------------------------------------------------------- |
+   | Price        | usd, aud, cad, sgd, gbp, cent, $, €, £, ₹                                                                        |
+   | Size         | mm, cm, m, mi, in, ft, mm2, cm2, m2, mi2, in2, ft2, mm3, cm3, m3, mi3, in3, ft3, l, fl oz, gal, qt, pt, bbl, tsp |
+   | Weight       | mg, g, kg, lb, oz                                                                                                |
+   | Pressure     | pa, kpa, atm, torr, bar, psi, mmhg, psia, psig, ksi                                                              |
+   | Product Info | b, kb, mb, gb, tb, pb, eb, ib, kib, mib, gib, tib, pib, eib                                                      |
+6. **Default Configuration**: This is used to power the queries that do not have a dimension attribute.\
+   For example, your search query is "**red shirt under 10**". \
+   Here, the user/merchandiser must set up a default dimension (Price or Size, in this case) so that the search result displays products with a price less than $10 or products with a size less than ten.
+7. **Tolerance configuration**: It is a flexibility factor which gives you better search results.\
+   Currently, the query builder follows a configurable normalization range of ±10%.
 
-- The user can add upto 5 attributes per dimension type.
-
-| **Dimension** | **Units**                                                                                |
-| :------------ | :--------------------------------------------------------------------------------------- |
-| Price         | usd,aud,cad,sgd,gbp,cent,$,€,£,₹                                                         |
-| Size          | mm,cm,m,mi,in,ft,mm2,cm2,m2,mi2,in2,ft2,mm3,cm3,m3,mi3,in3,ft3,l,fl oz,gal,qt,pt,bbl,tsp |
-| Weight        | mg,g,kg,lb,oz                                                                            |
-| Pressure      | pa,kpa,atm,torr,bar,psi,mmhg,psia,psig,ksi                                               |
-| Product Info  | b,kb,mb,gb,tb,pb,eb,ib,kib,mib,gib,tib,pib,eib                                           |
-
-- The user can add upto 5 attributes per dimension type.
+   \
+   After you have decided the type of strategy, you can click save configuration and click sync add measurement search configurations to your search.
