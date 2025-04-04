@@ -12,3 +12,42 @@ Imagine you are a merchandiser managing an online catalog. You have many fields 
 - **Optimization**: Reduces unnecessary field usage by limiting fields to only those necessary for operations such as promotions, facets, or autosuggest features.
 - **Performance Boost**: By reducing the number of active fields, it helps in improving the overall system performance by lowering indexing times and reducing API load.
 - **Cost Savings**: Minimizes API calls and reduces operational costs by restricting the number of active fields.
+
+## Field Config Properties
+
+The **Field Configuration** feature offers several key properties that allow you to manage fields effectively. Navigate to \*\* Manage \*\* \> \*\* Catalog \*\* \>**Field Properties**  from Unbxd console.
+
+- **Feature Types**:\
+  Merchandisers can assign specific tags to fields, such as:
+  - **"Merchandisable"**: This field will only be available in the promotion section.
+  - **"Facetable"**: This field will appear in the facets and banners section.
+  - **"Autosuggest"**: This field will appear in keyword suggestions, infield suggestions, and in search fields under the popular products section.
+- **Usability**:\
+  The **Field Configuration** feature supports both **single-select** and **multi-select** operations, allowing bulk field management for efficient workflows.
+
+<Info>
+  - Only the fields actively used in rule/campaign creation for promotions will remain **"Merchandisable"**.
+  - Only the fields used under facets and banners will remain **"Facetable"**.
+  - Only the fields used in keyword suggestions and search fields for popular products will remain **"Autosuggest"**.
+</Info>
+
+## Enable Field properties
+
+Here are the other functionalities on the Segment dashboard.
+
+1. Search
+2. Filter
+3. Configure Attributes
+4. Bulk upload/download segments
+5. Add new Segment
+
+Follow these steps to configure your fields and enable necessary features:
+
+1. Select Fields to Modify: Select one or more fields that need to be enabled for specific features.
+2. **Bulk Enable Features**: Click on the **Action** button and from the dropdown, click on **"Bulk Enable Features"**. A pop-up will appear where you can select the feature (e.g., **"Merchandisable"**, **"Facetable"**, or **"Autosuggest"**).
+3. Click **Bulk Enable** to activate the features for the selected fields.
+4. **Bulk Disable Features**: If you need to disable a feature for a field, follow the same steps and select **Bulk Disable Features** from the dropdown menu.
+
+- **<u>Filter and Sync Options:</u>**
+- Use the filter option to narrow your search by field names (Refer to Fig 3).
+- In the future, remember to click the **Sync** button to complete the enable/disable process. Without syncing, the feed will not be indexed—a crucial step that must not be overlooked.
