@@ -1,0 +1,40 @@
+---
+title: "New file"
+description: "Description of your new file."
+---
+
+**Vector Search** is a powerful feature in Unbxd that enhances product discovery and improves the relevance of search results. Unlike traditional keyword-based search systems, which rely on exact word matches, vector search allows Unbxd to understand the **Intent** behind a user's query and find the most relevant products, even if they don't contain the exact words searched for. It works best with long-tailed queries.
+
+### Enable Vector Search
+
+1. Navigate to Unbxd console \> Algorithm \> Intent \> Vector Search
+2. Click on the "Contact support" link, which will auto create a ticket for enabling this feature at the product end for approval. Post that the toggle button will be in an active state for the customer.
+3. Once the feature is enabled, the Customer is set to use the Vector search for the search-related queries. You need to set up the strategy at your end for Hybrid search and FallBack search as below:
+
+   ![Vectorsearch Gi](/images/Vectorsearch.gif)
+
+   Since Vector Search works best with long-tailed queries, you need to manually set up the minimum number of words to activate Vector Search.
+
+   For Example
+
+   <Info>
+     **Hybrid Search** combines both traditional keyword-based search and vector search. It ensures that users benefit from the precision of keyword matching while also leveraging the semantic understanding provided by vector search\
+     \
+     \*\*Fallback Search \*\*ensures that in case no or fewer results are found from the traditional keyword-based search, **vector search** will be used as a **fallback**. **Vector search will** analyze the **semantic meaning** of the search query and look for products that are related to it but may not contain the exact words.
+   </Info>
+
+#### Use Case
+
+|                                           | **Traditional flow**                                                                                                                                         | \*\*Traditional search \+ Vector Search \*\*                                                                                                                                                                                                                                                                                                                                                                                                             |
+| :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Hybrid Strategy using Vector Search**   | If a user types "**smartphone**" in the search bar. Traditionally, the search result will give, for example, 15 products, matching the exact search keywords | If vector search is enabled, the search can also surface products that are categorised as "smartphones" but also use description terms as “**mobile phone"**, **"cell phone"**, **"smart device"**, and **"gadget"**. This helps ensure that search results are semantically relevant, even if the keywords don't match exactly, and the search result could be 40.                                                                                      |
+| **Fallback strategy using Vector Search** | If a user types a search query as "**running shoes**", and the search result gives 10 product listings for running shoes                                     | Initially, the user has set the minimum number of products for which the fallback model will be activate vector search is 10, then automatically vector search will get activated and include your search result with product description  **“sports shoes”**, **“jogging shoes”**, **“athletic shoes”**, **“trail running shoes”**. Even though these terms do not exactly match the search query. an extra 20 products for the keyword "running shoes" |
+
+Let’s say a user types “**leather shoes**” in the search bar. With vector search, even if the product listings don’t explicitly contain the exact phrase “leather shoes”, the search can still surface products that are semantically related. For example, products listed as “genuine leather boots” or “premium leather sandals” could still appear in the search results for “leather shoes”.
+
+Similarly, items labeled as “cowhide shoes”, “full-grain leather loafers”, or “vegan leather sneakers” might also surface  (if vector search understands the semantic context of "leather") , even though those keywords don’t exactly match the search term "leather shoes."
+
+#### What to Expect After Enabling
+
+- After the feature is enabled, **Vector Search** will become available for your search queries.
+- The system will automatically handle the vectorization of product data and user queries, and search results will be ranked based on semantic meaning rather than exact keyword matches, offering more accurate and contextually relevant products to your users.
