@@ -1,0 +1,38 @@
+---
+title: "Measurement Search"
+description: "Process any search query which has dimensions to it using Unbxd Measurement Search"
+---
+
+This feature empowers you to perform precise searches based on measurable product attributes such as size, weight, price, product Info, or pressure. This functionality allows for fine-tuning search results by defining a search strategy & configuring dimensional attributes with measurable units. For example, in a search query "**10** is a dimension that will pull out the results based on the query.
+
+### Enable Measurement Search
+
+1. Navigate to Unbxd console \> Algorithm \> Intent \> Measurement Search
+2. Click on the CTA button to enable the Measurement Search.
+3. Once the feature is enabled, the Customer is set to use the Measurement search for the search-related queries.
+
+   ![Measurement Search Gi](/images/MeasurementSearch.gif)
+4. Strategy Selection: You can select either the strategy offered below:
+
+   | Strategy | Description                                                                                                                                                                                                                                                                                    |
+   | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Boost    | In this mode, products within the specified measurement range are given higher prominence in search results. For example, if a shopper searches for a washing machine with a capacity of 7 kg, and only 7.5 kg machines are in stock, the 7.5 kg models will be boosted in the search results. |
+   | Filter   | In this mode, the measurement-related attributes (e.g., size, weight, dimensions) are identified and exact same products are filtered in the search result.                                                                                                                                    |
+5. Configure Attributes: This section enables search using measurable attributes. You must select the attributes from the catalog and map the dimensions and units accordingly. You can add up to 5 attributes per dimension type. Currently we support following units:
+
+   | Dimension    | Unit                                                                                                             |
+   | :----------- | :--------------------------------------------------------------------------------------------------------------- |
+   | Price        | usd, aud, cad, sgd, gbp, cent, $, €, £, ₹                                                                        |
+   | Size         | mm, cm, m, mi, in, ft, mm2, cm2, m2, mi2, in2, ft2, mm3, cm3, m3, mi3, in3, ft3, l, fl oz, gal, qt, pt, bbl, tsp |
+   | Weight       | mg, g, kg, lb, oz                                                                                                |
+   | Pressure     | pa, kpa, atm, torr, bar, psi, mmhg, psia, psig, ksi                                                              |
+   | Product Info | b, kb, mb, gb, tb, pb, eb, ib, kib, mib, gib, tib, pib, eib                                                      |
+6. **Default Configuration**: This is used to power the queries that do not have a dimension attribute.\
+   For example, your search query is "**red shirt under 10**". \
+   Here, the user/merchandiser must set up a default dimension (Price or Size, in this case) so that the search result displays products with a price less than $10 or products with a size less than ten.
+7. **Tolerance configuration**: It is a flexibility factor which gives you better search results.\
+   Currently, the query builder follows a configurable normalization range of ±10%.
+
+### Ready to use
+
+After you have decided the type of strategy, you can click save configuration and click sync add measurement search configurations to your search.
