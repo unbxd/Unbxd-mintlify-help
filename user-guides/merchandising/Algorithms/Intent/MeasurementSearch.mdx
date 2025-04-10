@@ -5,17 +5,21 @@ description: "Process any search query which has dimensions to it using Unbxd Me
 
 ## Overview
 
-This feature empowers you to perform precise searches based on measurable product attributes such as size, weight, price, product Info, or pressure. This functionality allows for fine-tuning search results by defining a search strategy & configuring dimensional attributes with measurable units. \
+This feature lets you run more accurate searches using specific product details like **size**, **weight**, **price**, or **pressure**. You can fine-tune search results by setting up a strategy and using product attributes that have measurable values and units.\
 \
-_For example,_ A user searches a query: **"28 inch denim jeans"**. \
-**28 inches** is the **measurable dimension** (in this case, the **waist size**) that the user is looking for.
-
+_For example,_ if you have a search query: "28 inch denim jeans".  Here, "**28 inches**" refers to a **measurable dimension**.\
+\
+**Search Context:** The system understands that the user is looking for jeans that have a waist measurement of **28 inches**. This is a clear, quantifiable search attribute (the waist size) that the system can use to filter and narrow down the results.\
+\
+**Measurable Dimension:** A specific, quantifiable attribute of a product (such as size, weight, or price) that can be used to filter or refine search results based on exact values or units.\
+\
+By using this feature, you can set those exact dimensions (width, weight, and price) to refine your search results. The system will only show chairs that match **all** of these attributes, helping you find the perfect chair that fits your needs.\
 The search engine will need to identify the relevant product attribute for waist size and filter out products that don’t match this measurement.
 
 ### Prerequisites
 
-1. You should have a valid **UNBXD account** with appropriate permissions to access the **Self-Serve Console**. This console allows you to configure various aspects of your search, product data, and system settings.
-2. **Measurement Search** must be enabled on your UNBXD account. This could be enabled by clicking on the toggle button, if it’s not yet activated. Once the feature is enabled, the Customer is set to use the Measurement search for the search-related queries.
+1. You should have a valid **UNBXD account** with appropriate permissions to access the **Self-Serve Console**. The console allows you to configure various aspects of your search, product data, and system settings.
+2. **Measurement Search** must be enabled on your UNBXD account. This could be enabled by clicking on the toggle button.
 
 ### Set up Measurement Search
 
@@ -23,12 +27,12 @@ The search engine will need to identify the relevant product attribute for waist
 2. Click on the **CTA button** to enable the Measurement Search.
 
    ![Measurement Search Gi](/images/MeasurementSearch.gif)
-3. **Strategy Selection**: You can select either the strategy offered below:
+3. **Strategy Selection**: You can select either the strategy: Boost or Filter.
 
-   | Strategy | Description                                                                                                                                                                                                                                                                                          |
-   | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Boost    | In this mode, products within the specified measurement range are given higher prominence in search results. \ **For example**, if a shopper searches for a washing machine with a capacity of 7 kg, and only 7.5 kg machines are in stock, the 7.5 kg models will be boosted in the search results. |
-   | Filter   | In this mode, the measurement-related attributes (e.g., size, weight, dimensions) are identified and exact same products are filtered in the search result.                                                                                                                                          |
+   | Strategy   | Description                                                                                                                                                                                                                                                                                         |
+   | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | **Boost**  | In this mode, products within the specified measurement range are given higher prominence in search results.  **For example**, if a shopper searches for a washing machine with a capacity of 7 kg, and only 7.5 kg machines are in stock, the 7.5 kg models will be boosted in the search results. |
+   | **Filter** | In this mode, the measurement-related attributes (e.g., size, weight, dimensions) are identified and exact same products are filtered in the search result.                                                                                                                                         |
 4. **Configure Attributes**: This section enables search using measurable attributes. You must select the attributes from the catalog and map the dimensions and units accordingly. You can add up to 5 attributes per dimension type. Currently we support the following units:
 
    | Dimension    | Unit                                                                                                             |
@@ -41,10 +45,10 @@ The search engine will need to identify the relevant product attribute for waist
 5. **Default Configuration**: This is used to power the queries that do not have a dimension attribute.\
    For example, your search query is "**red shirt under 10**". \
    Here, the user/merchandiser must set up a default dimension (Price or Size, in this case) so that the search result displays products with a price less than $10 or products with a size less than ten.
-6. **Tolerance configuration**: It is a flexibility factor which gives you better search results.\
+6. **Tolerance configuration**: It is a flexibility factor that gives you better search results.\
    Currently, the query builder follows a configurable normalization range of ±10%.
 
-After you have decided the type of strategy, you can click **save **configuration and click sync add measurement search configurations to your search.
+After you have decided the type of strategy, you can click \*\*save \*\*configuration and click sync add measurement search configurations to your search.
 
 ### Use Case
 
