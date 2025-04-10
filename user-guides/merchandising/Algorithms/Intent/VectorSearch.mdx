@@ -42,7 +42,7 @@ Vector Search helps users find what they _mean_, not just what they _say_. It im
 
 ![Enable Vector Search ](/images/VectorSearch_enableSupport.png)
 
-3. Set your Vector Search strategy. There are two options available: Hybrid search & Fallback search.
+1. Set your Vector Search strategy. There are two options available: Hybrid search & Fallback search.
    - Hybrid search : You have to set up the minimum number of words to activate Hybrid search.
    - Fallback search: If the number of products shown in the search results is **less than or equal to** the number you’ve set, Vector Search will automatically turn on to show more relevant results.
 
@@ -83,3 +83,20 @@ If a user searches for “running shoes”, keyword search returns 10 products. 
 - **“athletic shoes”**
 
   Final result count: 30 products. This ensures _Vector Search makes up for what keyword search missed._
+
+## Troubleshooting & FAQs
+
+<Accordion title="Do I need to enable Vector Search manually?" icon="sparkles">
+  Yes, To enable: \
+  Go to **Unbxd Console \> Algorithm \> Intent \> Vector Search.**\
+  Click **Contact Support** to auto-create a ticket\
+  Once approved, the **toggle button** becomes active
+</Accordion>
+
+<Accordion title="How do I activate Hybrid Search?" icon="sparkles">
+  You must **set the minimum number of words** required in the search query to trigger Hybrid Search (ideal for long-tail or descriptive queries).
+</Accordion>
+
+<Accordion title="What happens if the query is too short for Hybrid Search?" icon="sparkles">
+  If the query doesn’t meet the minimum word count you've set, **Vector Search won’t activate** under Hybrid mode, and traditional search will be used instead
+</Accordion>
