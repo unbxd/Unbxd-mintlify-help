@@ -23,7 +23,7 @@ This is especially helpful for longer, more detailed searches, like when someone
 
 ### Enable Vector Search
 
-1. Navigate to Unbxd console \> **Algorithm  **\> **Intent** \> **Vector Search.**
+1. Navigate to **Unbxd console** \> **Algorithm **\> **Intent** \> **Vector Search.**
 2. Click on the **"Contact support**" link, which will auto create a ticket for enabling this feature at the product end for approval. Once approved, the toggle button will be in an active state for the customer.
 
    Once the feature is enabled, the Customer is set to use the Vector search for the search-related queries. You need to set up the strategy at your end for **Hybrid search** and **FallBack search** as below:
@@ -32,12 +32,14 @@ This is especially helpful for longer, more detailed searches, like when someone
 
    Since Vector Search works best with long-tailed queries, you need to manually set up the minimum number of words to activate Vector Search.
 
-   For Example
-
    <Info>
-     **Hybrid Search** combines both traditional keyword-based search and vector search. It ensures that users benefit from the precision of keyword matching while also leveraging the semantic understanding provided by vector search\
+     **Hybrid Search** combines both traditional keyword-based search and vector search. 
+
+     It ensures that users benefit from the precision of keyword matching while also leveraging the semantic understanding provided by Vector Search.\
      \
-     \*\*Fallback Search \*\*ensures that in case no or fewer results are found from the traditional keyword-based search, **vector search** will be used as a **fallback**. **Vector search will** analyze the **semantic meaning** of the search query and look for products that are related to it but may not contain the exact words.
+     **Fallback Search** ensures if a regular keyword search shows **very few or no products**, Unbxd will automatically use **Vector Search** instead.
+
+     Vector Search looks at the **meaning** of the search, not just the exact words. This helps show products that are **related or relevant**, even if they don’t include the same keywords.
    </Info>
 
 #### Use Case
@@ -51,7 +53,15 @@ Let’s say a user types “**leather shoes**” in the search bar. With vector 
 
 Similarly, items labeled as “cowhide shoes”, “full-grain leather loafers”, or “vegan leather sneakers” might also surface  (if vector search understands the semantic context of "leather") , even though those keywords don’t exactly match the search term "leather shoes."
 
-#### What to Expect After Enabling
+### Impact of Vector Search 
 
-- After the feature is enabled, **Vector Search** will become available for your search queries.
-- The system will automatically handle the vectorization of product data and user queries, and search results will be ranked based on semantic meaning rather than exact keyword matches, offering more accurate and contextually relevant products to your users.
+Vector Search helps users find what they _mean_, not just what they _say_. It improves the accuracy, depth, and usefulness of search results, especially for longer or more natural language queries.
+
+- **Understands intent:**\
+  Helps the search engine interpret the _meaning_ behind what users type, not just the words.
+- **Fewer dead ends:**\
+  Reduces the chances of “no results found” pages by showing related products.
+- **Better relevance:**\
+  Surfaces products that truly match what the user is looking for, even if the keywords don’t match exactly.
+- **Boosts conversions:**\
+  When users find what they need faster, they’re more likely to buy — improving sales and user satisfaction.
