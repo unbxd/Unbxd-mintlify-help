@@ -45,7 +45,16 @@ These factors collectively contribute to the Score (final product score), which 
 AI Models: The models that influence the overall search result:
 
 1. Content Model: The Content Model analyzes your product catalog to understand what each product is, based on its attributes like title, description, brand, color, size, material, and so on.\
-   It structures and enriches product data to improve discoverability. 
+   It structures and enriches product data to improve discoverability.
 2. Intent Model: The Intent Model interprets what the shopper _really_ means when they type a search query even if it’s not phrased perfectly. Refer here for details of Intent Model
-3. Ranking Model
-4. Fallback Model : if none of the above model works for the search query, the search reult will be empowered by the Fallback Model.
+3. Ranking Model: The Ranking Model decides the order in which products appear in search results. It scores products based on factors like relevance, user engagement, popularity, availability, and business rules. It ensures the most relevant and high-performing products show up at the top.\
+   For example: If a user searches for "_wireless headphones" and _ two products matches the search query, the Ranking Model will boost **Product A** higher in the search results because:
+   - Product A has a higher click-through rate and better reviews.
+
+
+   - Product B is new with little engagement.
+4. Fallback Model: If none of the primary models — **Content**, **Intent**, or **Ranking** — are able to return strong or relevant results for a search query, the **Fallback Model** steps in to support the search. The Fallback Model ensures users **never hit a dead-end** by retrieving semantically related products using **Vector Search**, even when exact matches are missing.\
+   For example: Example: If a user searches for: _“shoes for muddy trails” and _no product contains this exact phrase or Content & Intent models can't map it clearly then **Fallback Model** uses vector search to surface results like:
+   - _“Trail running shoes”_
+   - _“Hiking boots”_
+   - _“Waterproof outdoor shoes_
