@@ -5,19 +5,22 @@ description: "AI Metadata in Unbxd enriches your product catalog by automaticall
 
 ## Overview
 
-**AI Metadata** is a smart feature in Unbxd that automatically adds important information (called attributes) to your product listings using **Artificial Intelligence**.\
+**AI Metadata** is a smart feature in Unbxd that automatically adds important information (called attributes) to your product listings using **Artificial Intelligence**.
 It decodes complex search queries to help shoppers find exactly what they want. It looks at your product titles, descriptions, and other content to figure out things like: **Color, Material, Style**, **Fit**, **Occasion,** and so on.
 
-For example, if a product is titled “Elegant black evening dress with lace”, Unbxd’s AI will automatically extract:
+For example, if a product is titled “**white dress for summer brunch**”, Unbxd’s AI will automatically extract:
 
-- **Color**: Black
-- **Style**: Evening
-- **Material**: Lace
-- **Occasion**: Formal
+- **Color**: White
+- **Occasion**: Brunch
+- **Season**: Summer
+- **Style**: Casual / Daywear (based on content patterns)
 
-These attributes get added to your catalog as **metadata**, which helps improve how this product shows up in search or filtering. Even if this info isn’t manually added to your product catalog, **AI Metadata can detect it automatically.**\
-Merchandiser would want to **what are the factors that impact users search result. Which model**\
-**this is part of improving the debuggability of the model for the merchandiser**
+**Solution with AI Metadata:**
+Unbxd's AI Metadata automatically extracts these attributes are enriched in the product metadata, enabling the system to match the search intent and surface the most relevant white dresses. The customer is shown perfectly suited products for a summer brunch in white. This leads to better user satisfaction, quicker product discovery, and increased conversions.
+
+These attributes get added to your catalog as **metadata**, which helps improve how this product shows up in search or filtering. Even if this info isn’t manually added to your product catalog, **AI Metadata can detect it automatically.**
+
+![Insights Ezgif Com Crop Gi](/images/insights-ezgif.com-crop.gif)
 
 ## Impact of AI-Meta Data
 
@@ -29,7 +32,7 @@ Merchandiser would want to **what are the factors that impact users search resul
 
 ## Use AI-Meta Data
 
-1. Navigate to \*\*Search Preview\*\* on the Unbxd console.
+1. Navigate to **Search Preview** on the Unbxd console.
 2. Click Debug View from the drop-down.\
    ![Debugview Pn](/images/debugview.png)
 
@@ -38,15 +41,17 @@ In Debug view, you would be able to see the below:
 - **Site Perfomance**: It measures how fast and efficiently the site responds to search requests._For example_: Search results loaded in 130ms.
 - **Query Performace**: This tracks how well a specific search query performs in terms of speed and relevance._For example_: if a user searches for “leather boots” the webite took 120ms and returned 25 results. 120ms & 25 results are the attribules of Query performance
 - **Relevancy**: Indicates how closely a product matches the user's search intent and query terms. _For_example_: A product has 4/5 relevancy score for “wireless earbuds”.
-- \*\*Performance \*\*(if enabled) : Displays user engagement metrics like clicks, add-to-cart, and conversions per product.\_ For example:A product has a 5% conversion rate from searches in the last 7 days.
+- **Performance** (if enabled) : Displays user engagement metrics like clicks, add-to-cart, and conversions per product.\_ For example:A product has a 5% conversion rate from searches in the last 7 days.
 
 These factors collectively contribute to the **Score** (final product score), which determines the product's ranking in search results.
 
-## AI Models: Models that influence the overall search result:
+## AI Models: Models that Influence the Overall Search Result
+
+Click Insights to understand how shoppers are interacting with Search and Browse.
 
 1. **Content Model**: The Content Model analyzes your product catalog to understand what each product is, based on its attributes like title, description, brand, color, size, material, and so on.\
    It structures and enriches product data to improve discoverability.\
-   For example: If a product title is \_"Slim Fit Cotton Shirt – Blue, Medium". \_The Content Model will extract the below:
+   For example: If a product title is "Slim Fit Cotton Shirt – Blue, Medium". The Content Model will extract the below:
    - _Category_: Shirt
    - _Fit_: Slim Fit
    - _Material_: Cotton
@@ -60,7 +65,7 @@ These factors collectively contribute to the **Score** (final product score), wh
    - _Price filter_: Less than $200\
      This model helps in showing ergonomic chairs with lumbar support within the price range.
    - Intent Model uses below algorithms to understand the purpose of the search query.\
-      -**Named entity recognition**: It detects and tags important keywords in a search query, like brand, color, size, or product typ,to better understand user intent.
+     -**Named entity recognition**: It detects and tags important keywords in a search query, like brand, color, size, or product typ,to better understand user intent.
      -**Measurement Search:** It allows shoppers to search using specific dimensions (like size, weight, or price), and returns products that match those exact measurable values.
      -**Vector Search**: IT uses AI to understand the _meaning_ behind a search query, returning relevant products even when exact keywords aren’t used.
 
