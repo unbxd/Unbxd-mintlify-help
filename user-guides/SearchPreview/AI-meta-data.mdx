@@ -8,7 +8,7 @@ description: "AI Metadata in Unbxd enriches your product catalog by automaticall
 **AI Metadata** is a smart feature in Unbxd that automatically adds important information (called attributes) to your product listings using **Artificial Intelligence**.\
 It decodes complex search queries to help shoppers find exactly what they want. It looks at your product titles, descriptions, and other content to figure out things like: **Color, Material, Style**, **Fit**, **Occasion,** and so on.
 
-For example, if a product is titled “Elegant black evening dress with lace”, Unbxd’s AI will automatically extract: 
+For example, if a product is titled “Elegant black evening dress with lace”, Unbxd’s AI will automatically extract:
 
 - **Color**: Black
 - **Style**: Evening
@@ -29,17 +29,23 @@ Merchandiser would want to **what are the factors that impact users search resul
 
 ## Use AI-Meta Data
 
-1. Navigate to **Search Preview **on the Unbxd console.
+1. Navigate to \*\*Search Preview \*\*on the Unbxd console.
 2. Click Debug View from the drop-down.\
    ![Debugview Pn](/images/debugview.png)
 
 In Debug view, you would be able to see the below:\
 -Site Perfomance: It measures how fast and efficiently the site responds to search requests. For example: Search results loaded in 130ms.\
 -Query Performace: This tracks how well a specific search query performs in terms of speed and relevance._for example:_  if a user searches for “leather boots” the webite took 120ms and returned 25 results. 120ms & 25 results are the attribules of Query performance\
--Relevancy: Indicates how closely a product matches the user's search intent and query terms. For_example:_  A product has 4/5 relevancy score for “wireless earbuds”.\
+-Relevancy: Indicates how closely a product matches the user's search intent and query terms. For_example:\_  A product has 4/5 relevancy score for “wireless earbuds”.\
 -Performance(if enabled) : Displays user engagement metrics like clicks, add-to-cart, and conversions per product.\
 _Example:_ A product has a 5% conversion rate from searches in the last 7 days.\
 \
 These factors collectively contribute to the Score (final product score), which determines the product's ranking in search results.
 
-AI Models
+AI Models: The models that influence the overall search result:
+
+1. Content Model: The Content Model analyzes your product catalog to understand what each product is, based on its attributes like title, description, brand, color, size, material, and so on.\
+   It structures and enriches product data to improve discoverability. 
+2. Intent Model: The Intent Model interprets what the shopper _really_ means when they type a search query even if it’s not phrased perfectly. Refer here for details of Intent Model
+3. Ranking Model
+4. Fallback Model : if none of the above model works for the search query, the search reult will be empowered by the Fallback Model.
