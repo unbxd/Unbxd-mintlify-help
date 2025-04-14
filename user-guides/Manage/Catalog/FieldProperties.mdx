@@ -1,0 +1,116 @@
+---
+title: "Field Properties"
+description: "A field configuration is a set of rules that determines which fields are available for a catalog"
+---
+
+The **Field Configuration** feature has been introduced to streamline the management of fields within your catalog. Over time, businesses can accumulate many irrelevant and unused fields that affect the efficiency of search and browse operations, particularly when creating promotions, facets, and banners. These excessive fields increase API costs, consume unnecessary resources, and degrade system performance.
+
+Imagine you are a merchandiser managing an online catalog. You have many fields that are not used for promotions, banners, or facets, but they are still part of the catalog's backend. As a result, you face higher costs due to the unnecessary API calls, and your system is slowed down due to indexing irrelevant fields. With **Field Configuration**, you can easily manage and streamline which fields are used for specific operations, optimizing your workflow and saving on API costs.
+
+## Key Features of Field Configuration
+
+- **Optimization**: Reduces unnecessary field usage by limiting fields to only those necessary for operations such as promotions, facets, or autosuggest features.
+- **Performance Boost**: By reducing the number of active fields, it helps in improving the overall system performance by lowering indexing times and reducing API load.
+- **Cost Savings**: Minimizes API calls and reduces operational costs by restricting the number of active fields.
+
+## Field Config Properties
+
+The **Field Configuration** feature offers several key properties that allow you to manage fields effectively. 
+
+1. Navigate to **Manage**  \> **Catalog** \>**Field Properties**  from Unbxd console.
+
+- **Feature Types**:\
+  Merchandisers can assign specific tags to fields, such as:
+  - **"Merchandisable"**: This field will only be available in the promotion section in [Filter](https://docs.netcoreunbxd.com/user-guides/merchandising/promotions/filter).
+  - **"Facetable"**: This field will appear in the facets and banners section.
+  - **"Autosuggest"**: This field will appear in keyword suggestions, infield suggestions, and search fields under the popular products section.
+- **Usability**:\
+  The **Field Configuration** feature supports both **single-select** and **multi-select** operations, allowing bulk field management for efficient workflows.
+
+<Info>
+  **Important Points to Remember:**
+
+  - Only fields used in **Promotion** rules or campaigns will be kept as **Merchandisable**.
+  - Only fields used in **Facets **or **Banners **will be kept as **Facetable**.
+  - Only fields used in keyword **Suggestions** or Search will be kept as **Autosuggest**.
+</Info>
+
+## Enable Field properties
+
+Here are the other functionalities on the Segment dashboard.
+
+1. Search
+2. Refresh
+3. Filter
+4. Sync
+5. Ability to bulk export/import field configuration
+6. Action
+
+### 1. Search a Field property
+
+You can utilise the search option to find a specific field configuration to edit and manage it.
+
+### ![Fieldsegment Gi](/images/Fieldsegment.gif)
+
+### 2. Refresh the feed
+
+If you dont see a field that is newly added to the feed, you can choose to refresh the page. This operation takes 20 seconds approximately.
+
+### 3. Filter Fields
+
+Use the **filter** option to narrow your search for specific field names. This makes it easier to find fields when managing large catalogs.
+
+### ![Filterfieldpro Gi](/images/Filterfieldpro.gif)
+
+### 4. Sync the field properties
+
+Once you’ve enabled or disabled features, click the **Sync** button. This ensures that changes are reflected and indexed correctly. Without syncing, the feed won’t be indexed, which may lead to delays in applying the feature changes.
+
+### 5. Ability to bulk export/import Field Configurations
+
+The **Bulk Export/Import Field Configurations** feature allows users to manage and migrate field configuration settings efficiently across different environments. Bulk export/import enables you to streamline field management tasks. This feature saves time and effort by enabling easy migration of field settings while ensuring consistency and accuracy.
+
+With **Bulk Export/Import**, users can:
+
+- **Export** field configurations from the platform into a structured format (such as CSV or Excel), allowing for offline review or backup.
+- **Import** field configurations back into the system, making it easier to apply pre-defined configurations across multiple fields without having to manually edit them one by one.
+
+### 6. Action Button
+
+Follow these steps to configure your fields and enable necessary features:
+
+1. Select Fields to Modify: Select one or more fields that need to be enabled for specific features.
+2. **Bulk Enable Features**: Click on the **Action** button and from the dropdown, click on **"Bulk Enable Features"**. A pop-up will appear where you can select the feature (e.g., **"Merchandisable"**, **"Facetable"**, or **"Autosuggest"**).
+3. Click **Bulk Enable** to activate the features for the selected fields.
+4. **Bulk Disable Features**: If you need to disable a feature for a field, follow the same steps and select **Bulk Disable Features** from the dropdown menu.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My Feed Attribute is Missing in the Drop-down" icon="sparkles" iconType="solid">
+    If you encounter a situation where an attribute is missing from a dropdown (e.g., when configuring rules, facets, or promotions), follow these steps to resolve the issue:\
+    **Refresh Fields**:\
+    Navigate to **Manage \> Catalog \> Field Properties** and click on the **refresh icon** to reload the field properties. Wait for 10 seconds.
+
+    1. **Check for Missing Attribute**:\
+       Search for the attribute in the table. If it's not listed, it means the attribute is not present in the current feed.
+    2. **Update the Feed**:\
+       If the attribute is missing, initiate a new feed containing the required attribute. Wait for the indexing cycle to complete.
+    3. **Sync the Feed**:\
+       After the feed is indexed, click on the **refresh icon** again to ensure the attribute is updated.
+    4. **Tag the Attribute**:\
+       Once the attribute is available, tag it with the appropriate property for the dropdown context.
+    5. **Check the Dropdown**:\
+       Go back to the dropdown, and the missing attribute should now be available.
+  </Accordion>
+  <Accordion title=" Importing Fields with Errors" icon="sparkles" iconType="solid">
+    If you receive an error during import:
+
+    - **Check for Format Issues**: Ensure the file format is correct (CSV or Excel) and the required columns (e.g., Field Name, Feature Tag, Enabled) are included.
+    - **Feature Tag Mismatch**: Verify that the feature tags in the import file match the predefined tags in the system (e.g., **Merchandisable**, **Facetable**, **Autosuggest**).
+    - **Missing Fields**: If a field mentioned in the import file does not exist in the catalog, ensure that the field is created first before importing the configuration.
+  </Accordion>
+  <Accordion title="Exported File Contains Missing Data" icon="sparkles" iconType="sharp-solid">
+    If certain fields or configurations are missing from the exported file:  Refresh Field Config Page: Refresh the page and try exporting again.  Check for Permissions: Ensure you have the necessary permissions to export field configurations.
+  </Accordion>
+</AccordionGroup>
