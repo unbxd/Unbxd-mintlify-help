@@ -13,24 +13,35 @@ This is especially helpful in reducing **zero-result searches**, improving **pro
 
 Synonyms come into play in several everyday search scenarios:
 
-- **Terms with the Same Meaning**\
+- **Terms with the Same Meaning**
   Words like _"ladies"_ and _"women's"_ or _"graph paper"_ and _"grid paper"_ refer to the same thing and should return the same products.
-- **Geographically Different Terms**\
+- **Geographically Different Terms**
   Shoppers in different regions may use different words for the same product. For example, _"slippers"_ in India are often referred to as _"flip-flops"_ in the US. Mapping these terms ensures search results remain relevant regardless of location.
-- **Related Terms**\
+- **Related Terms**
   Even if two terms are not exact synonyms, they may be closely related in context. A search for _"paper plates"_ could also show _"plastic plates"_ as relevant alternatives.
-- **Hyponyms**\
+- **Hyponyms**
   A more specific term (like _"desktop PC"_) can be mapped to a broader category (_"computers"_) to expand results meaningfully.
-- **Spelling Variants**\
+- **Spelling Variants**
   Differences in dialect or preference can lead to spelling variants like _"color"_ vs _"colour"_ or _"adapter"_ vs _"adaptor"_. These should be treated as equivalent.
-- **Common Misspellings**\
+- **Common Misspellings**
   Shoppers may frequently misspell brand names or product terms—e.g., _"purel"_ instead of _"Purell"_. Adding such synonyms ensures they still see the right products.
-- **Spacing Variations**\
+- **Spacing Variations**
   Words like _"WiFi"_, _"Wi-Fi"_, and _"Wi Fi"_ are visually different but semantically the same. Handling such variations is key to delivering consistent results.
-- **Abbreviations**\
+- **Abbreviations**
   Shoppers may search using abbreviations like _"MK"_ for _"Michael Kors"_ or _"NYC"_ for _"New York City"_. Mapping these helps return complete and relevant results.
 
 By understanding these scenarios, you can set up synonyms that reflect how your customers actually search—making your on-site search smarter and more forgiving.
+
+<Info>
+  What should synonyms not include?
+
+  - **Empty record**: entry where there is no value entered (whitespace)
+  - **Symbols**: entries where only symbols are typed as the value. The following characters are not accepted by our system : ‘ , ‘ ( comma) , ‘\+’ (plus), ‘{‘, ‘}’ (curly braces), ‘\*’ (Asterix),’&’ (Ampersand) , ‘\\’ (backslash) 
+  - **Alphanumeric**: entries with only alphanumeric values. It should have text characters.
+  - **Stopwords**: entries that contain just words that add no value like of, for, the, or any such stopwords.
+  - **Redundant Synonyms**: entries that already exist. Don’t add two similar inputs.
+  - **Multi-term Synonyms**: Synonyms having more than 2 keywords should be avoided. 
+</Info>
 
 ## Types of Synonyms
 
@@ -41,7 +52,7 @@ By understanding these scenarios, you can set up synonyms that reflect how your 
     **Example**\
     If **"pants"** and **"trousers"** are set as two-way synonyms, a search for either will return results for both.
   </Tab>
-  <Tab title="One-Way Synonyms ">
+  <Tab title="One-Way Synonyms">
     These are uni-directional. A search for the **primary keyword** returns results for its synonyms, but not vice versa.
 
     **Example**\
@@ -49,7 +60,32 @@ By understanding these scenarios, you can set up synonyms that reflect how your 
 
     - Searching for **“white running shoes”** will return both **white** and **ivory** shoes.
     - Searching for **“ivory running shoes”** will only return **ivory** shoes, not white.
+
+    ### **Configure Synonyms**
+
+    Now that we know various use cases and types of synonyms let us understand how to configure these synonyms using the Unbxd console. 
+
+    **To add synonyms (or a single synonym)**:
+
+    1. Navigate to **_Content \> Synonyms_**_._
+    2. Click **Add a Synonym** to configure your keywords along with the synonyms.
+    3. Provide keywords for Synonyms in the **Type Search Keyword section.**
+    4. Provide queries in**One-Way Synonyms ** and **Two-way Synonyms.**
+    5. Click**Proceed ** to**save ** the configure Synonyms.
+
+       ### Bulk Upload Synonyms
+
+       With the **Bulk Upload Synonyms** feature, you can upload a list of synonyms. You can browse on your computer or use drag-and-drop. The supported upload format is **_.csv_**_._ 
+
+       > It is advisable for first-time users to upload a list of synonyms already known to their previous search system so that they can handle all those instances in Unbxd search. 
+
+    Once uploaded, you can see the number of synonyms added. Using the Bulk Download Synonyms feature, you can also bulk download all the synonyms you have configured. A .csv file is downloaded. 
+
+    ### **Delete a synonym**:
   </Tab>
 </Tabs>
 
-### 
+1. Navigate to **_Content \> Synonyms_**.
+2. Search for the keyword and click the hamburger icon next to it. 
+3. Click **_Delete_**, where you will receive a confirmation message for deletion. 
+4. Click **_Yes_** if confirmed or **_No_** otherwise. 
