@@ -1,0 +1,272 @@
+---
+title: "Promotions"
+description: "Highlight your products by prioritizing, pinning, arranging, and organizing to present what shoppers desire to view."
+---
+
+# Promotions
+
+To customize product placement in Search Results Pages (SRPs), retailers can leverage the Promotions section under merchandising in the Netcore Unbxd Self Serve Console. This feature allows businesses to strategically control and prioritize the visibility of products based on their marketing goals.
+
+---
+
+## Steps to Set Up Promotions
+
+1. **Log in** to the Netcore UNBXD Search dashboard.
+2. Navigate to **Merchandising**. Select **Search** from the dropdown menu and click **Promotions**.
+
+---
+
+## Set Rule Conditions
+
+- **Query is**: Define the search query (e.g: winter boots) that will trigger the redirect.
+- **Campaign Name**: Assign a name to the promotion rule.
+- **Segment**: Specify the user segment this promotion applies to.
+- **Campaign Duration**: Set the time period during which the promotion will be active.
+- **Campaign Description**: Provide a brief description of the promotion’s purpose.
+
+---
+
+## AI-Suggested Queries
+
+AI-Suggested Queries recommend relevant search terms and category-based recommendations based on past search patterns, user behavior, popular searches, and semantic understanding.
+
+This helps users refine their queries, discover products efficiently, and reduce zero-result searches.
+
+<Tip>
+  **Example**
+
+  If you enter `White Dresses` as a query, the algorithm will surface related terms like:
+
+  white dress, white shoes, white bag, w hite sneakers, and so on.
+</Tip>
+
+Click the "`+`" icon next to each query you want to include, then click **Apply Changes**. The same rules will now apply to all the selected queries.
+
+![A Isuggestedsimilarqueries Ezgif Com Crop(2) Gi](/images/AIsuggestedsimilarqueries-ezgif.com-crop\(2\).gif)
+
+## Set Up A/B Test (Optional)
+
+You can turn on A/B testing to compare two different merchandising strategies or test your strategy against Netcore Unbxd’s default results.
+
+Here is how to set it up:
+
+- **Traffic Split**: Decide how to divide your website traffic between the two versions (e.g., 50-50, 60-40, or 70-30). Just make sure the total equals 100%.
+- **Pick a Winning Metric**: Select how to measure success using the “Winner is decided by” dropdown. The options include:
+  - Click Rate
+  - Average Order Value
+  - Revenue Per Visit
+  - Conversion Rate
+  - Cart Rate
+- **Set Test Duration**: Select how long the test should run. This time should be **shorter than your full campaign**.
+- **Choose a Backup Plan**: If no clear winner is found, pick a **Preferred variation** as your fallback option so the campaign keeps running smoothly.
+
+Once you are done, click **Apply**. You can now continue setting up your merchandising strategy.
+
+<Info>
+  - If you are comparing **Variation A vs. Variation B**, you need to configure both.
+  - If you are testing **Variation A vs. the default Unbxd results**, you only need to set up Variation A.
+</Info>
+
+## Set Merchandising Strategy Options
+
+1. After defining your query and campaign details, click **Next** to set the merchandising strategy.
+
+You can select from:
+
+<AccordionGroup>
+  <Accordion title="Boost" icon="sparkles">
+    ### Boost or Bury Products in Search
+
+    Control product visibility in search results by adjusting their ranking.
+
+    - **Boost** (Value: `1` to `100`) — Push products higher in results.
+    - **Bury** (Value: `-1` to `-100`) — Push products lower in results.
+
+    <Warning>
+      Enabling Boost disables the **Sort** option.
+    </Warning>
+    ### Set Up Boost
+
+    1. Click the **Boost** button.
+    2. Select an **Attribute** such as brand, price, and so on.
+    3. Select an **Operator** such as equals, contains, and so on.
+    4. Set a **Value** for the attribute.
+
+    ### Add Multiple Conditions (Boost Group)
+
+    - Click **\+ Add another attribute** to add more rules.
+    - All conditions in a group must be met for the Boost value to apply.
+    - Each group has its own Boost value.
+
+    ### Set Boost Value
+
+    - Once you have defined your conditions, select how much you want to push products up or down in the search results.
+      - Use a positive value\*\*(1 to 100)\*\*  to boost products higher in the list.
+      - Use a negative value\*\*(-1 to -100)\*\*  to bury products lower in the list.
+      - **Zero is not allowed**: You must enter a number other than 0.
+
+    ### Add More Boost Groups
+
+    - Click **\+ Add new Boost Group**
+    - If a product matches any group’s conditions, the Boost value applies.
+    - Groups follow **OR** logic.
+
+    ### Edit or Delete Boost Rules
+
+    - Click the **Edit** icon in the Strategy Summary.
+    - Click the **Delete** icon to remove a group or condition.
+    - Always click **Apply boost** before viewing summary to save your setup.
+  </Accordion>
+  <Accordion title="Sort" icon="sparkles">
+    ### Sort Search Results by Catalog Attributes
+
+    Organize results based on catalog attributes instead of default relevance.
+
+    - **Numerical attributes**: Low to high or high to low
+    - **Text attributes**: Alphabetical (A–Z or Z–A)
+
+    <Warning>
+      Using **Sort** disables **Boost**, **Pin**, and ****Slot options.****
+    </Warning>
+    ### Set Up Sort
+
+    1. Click the **Sort** button.
+    2. Select an **Attribute**.
+    3. Select the **Order** (ascending or descending).
+
+    ### Add Multiple Sort Conditions
+
+    - Click **\+ Add a set of conditions.**
+    - Rules are applied in order (THEN logic).
+
+    <Info>
+      **Example**
+
+      - 1st Rule: Sort by `Material_Type` A–Z — Cotton → Leather → Velvet
+      - 2nd Rule: Then sort by `Price` High → Low
+    </Info>
+    ### Remove Sort Conditions
+
+    - Click the **Edit** icon next to **Sort By**.
+    - Click the **Delete** icon next to the condition.
+  </Accordion>
+  <Accordion title="Pin">
+    ### Pin Products to Fixed Positions on the SRP
+
+    Fix a product at a specific position in the search results which overrides other rules and AI logic.
+
+    <Note>
+      - Pinning disables **Sort.**
+      - Maximum **20** pinned products in the top 50 positions.
+      - A product cannot be both **pinned** and **slotted** in the same position.
+    </Note>
+    ### How to Pin Products
+
+    Click the **Pin** button and select from the following methods:
+
+    #### 1. Search and Select
+
+    - Select from the **Pinned item** dropdown.
+    - Set its **Position (1–50).**
+    - Click **\+ Add another pin** if needed and click **Apply pin.**
+
+    #### 2. Drag and Drop
+
+    - Use the **instant preview** on the right side.
+    - Drag product to the desired position.
+    - Existing pinned products will shift automatically.
+
+    #### 3. Hover and Pin
+
+    - Hover over a product already in the desired position.
+    - Click the **Pin** icon.
+
+    <Info>
+      Only works if the product is already in that position
+    </Info>
+    #### 4. Upload via .CSV
+
+    - Navigate to **Pin strategy \> Settings icon \> Upload Pins (.CSV).**
+    - Drag and drop or upload your file. Use the sample file as reference.
+
+    ### Edit or Remove Pins
+
+    - From the listing page, click the **Edit** icon next to **Pinned**
+    - To remove:
+      - Click the **Delete** icon next to the rule, or hover in the preview and click the **Pin** icon again.
+  </Accordion>
+  <Accordion title="Slot">
+    ### Assign Products to Specific Slot Positions
+
+    Slot assigns products to fixed positions **only if** they meet specific criteria. If no product qualifies, the slot remains empty, and other ranking rules apply.
+
+    - A slot can cover multiple positions at once\*\*.\*\*
+    - You cannot pin and slot the same product in the same position
+
+    ### How to Set Up Slot
+
+    1. Click the **Slot** button
+    2. Choose a **Range** of positions
+    3. Choose an **Attribute**
+    4. Select an **Operator**
+    5. Set the **Value**
+
+    ### Add Multiple Conditions (Slot Group)
+
+    - Click **\+ Add another attribute**
+    - All conditions in the group must be true
+    - Non-matching products won’t be slotted
+
+    ### Add New Slot Groups
+
+    - Click **\+ Add New Slot Group**
+    - Groups use **OR** logic
+    - If a product matches any group, it qualifies
+
+    ### Edit or Delete Slot Rules
+
+    - Click the **Edit** icon next to Slot
+    - To delete a group or condition, click the **Delete** icon and confirm
+  </Accordion>
+  <Accordion title="Filter">
+    ### Filter Products in Search Results
+
+    Filter includes or excludes products from the results based on defined conditions.
+
+    Unlike Boost, Sort, Slot, or Pin — **Filter strictly removes** non-matching products.
+
+    ### Set Up Filter
+
+    1. Click the **Filter** button
+    2. Choose an **Attribute** (e.g., brand, category, stock status)
+
+    \> If the attribute is missing, go to **Field Configuration** to add it
+
+    1. Select an **Operator**
+    2. Set the **Value**
+
+    ### Add Multiple Conditions (Filter Group)
+
+    - Click **\+ Add another attribute**
+    - All conditions in the group must be met
+    - Products that don’t match are excluded
+
+    ### Add New Filter Groups
+
+    - Click **\+ Add new Filter group**
+    - Filter groups use **OR** logic
+    - If a product meets **any group**, it will be included
+
+    ### Edit or Delete Filter Rules
+
+    - Click the **Edit** icon next to Filter
+    - To delete:
+      - A group: Click **Delete** next to it
+      - A condition: Click **Delete** next to the rule
+  </Accordion>
+</AccordionGroup>
+
+1. Once satisfied, **save your changes**. A message displays, "Changes saved successfully."\*
+2. Click **Publish Rule** to apply the promotion live on your site.
+
+### 
