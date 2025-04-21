@@ -121,7 +121,8 @@
                    "user-guides/Manage/Catalog/DimensionMapping",
                    "user-guides/Manage/Catalog/FieldProperties"
                  ]
-               },
+               }
+             ],
               {
                  "group": "Search Preview",
                  "pages": [
@@ -133,11 +134,9 @@
 				   "user-guides/SearchPreview/VisualSearch"
                  ]
                 }
-              
              ]
            }
-        ]
-      },
+       ,
 	  {
         "tab": "What's New",
         "groups": [
