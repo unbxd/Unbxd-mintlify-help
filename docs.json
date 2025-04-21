@@ -129,9 +129,11 @@
                  "pages": [
                    {
                      "group": "Search Preview",
+                     "pages": [
                   "user-guides/SearchPreview/AI-meta-data",
 				  "user-guides/SearchPreview/ProductCardMapping",
 				  "user-guides/SearchPreview/VisualSearch"
+                     ]
                 }
              ]
            } ,
