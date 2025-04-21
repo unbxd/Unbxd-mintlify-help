@@ -125,10 +125,14 @@
               {
                  "group": "Search Preview",
                  "pages": [
+                   {
+                     "group": "Catalog",
+                 "pages": [
                    "user-guides/SearchPreview/AI-meta-data",
 				   "user-guides/SearchPreview/ProductCardMapping",
 				   "user-guides/SearchPreview/VisualSearch"
                  ]
+                }
               }
              ]
            }
