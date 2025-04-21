@@ -128,19 +128,8 @@
            }
         ]
       },
-      {
-        "tab": "What's New",
-        "groups": [
-          {
-            "group": "Onboarding",
-            "pages": [
-              "GettingStarted/Introduction"
-            ]
-          }
-        ]
-      },
 	  {
-        "tab": "Introduction",
+        "tab": "What's New",
         "groups": [
           {
             "group": "Merchandising Workbench",
