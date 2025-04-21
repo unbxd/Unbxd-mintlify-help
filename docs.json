@@ -122,14 +122,16 @@
                    "user-guides/Manage/Catalog/FieldProperties"
                  ]
                }
-             ],
+             ]
+          },
               {
-                 "group": "Search Preview",
+                 "group": "Preview",
                  "pages": [
+                   {
+                     "group": "Search Preview",
                   "user-guides/SearchPreview/AI-meta-data",
 				  "user-guides/SearchPreview/ProductCardMapping",
 				  "user-guides/SearchPreview/VisualSearch"
-                 ]
                 }
              ]
            } ,
