@@ -22,7 +22,8 @@ Suppose, you have called your field ‘amount1’, ‘amount2’, ‘amount3’ 
 Feature Fields are pre-defined Unbxd fields while Custom fields are the fields define by you. 
 
 Let’s read about them in detail.
-1. **Feature Fields: **Feature fields are a list of predefined Unbxd fields with a fixed schema that doesn’t need to be defined in the feed file. These fields are necessary for Autosuggest and Recommendations to work properly.
+
+**Feature Fields** are a list of predefined Unbxd fields with a fixed schema that doesn’t need to be defined in the feed file. These fields are necessary for Autosuggest and Recommendations to work properly.
 
 In most cases, you do not have to define the schema for these fields, however, when the feature field does not match with the corresponding field within your product feed, you can define the schema by the dataType of that field.
 
@@ -34,7 +35,6 @@ In another example, if the “size” field in your catalog has data type “dec
   Feature Fields can be used without explicitly defining them in the schema. If you have a similar field, you can either map it to the corresponding feature field from the Console or  rename your existing field to a feature field in the schema.
 </Note>
 
-\
 **In case you are navigating through the self-serve flow:**\
 Previously all the feature fields were showing up in the console even if they were not present in the catalog. This used to cause confusion e.g. say catalog has field “Price”. Users will see two fields “price” (feature field) and “Price” ( from use catalog ) leading to [confusion.To](http://confusion.To) fix this, the following change was done:
 
@@ -42,8 +42,7 @@ Previously all the feature fields were showing up in the console even if they we
 2. All the fields present in the user catalog should also be present in the schema upload.
 3. If a feature field is present in the user catalog,  then it should be present in the schema upload with the same data type as of that feature field. Say “category” is present in the catalog, then it should be added with data type “string” in schema upload. Only after that, this file will show up in the console.
 4. Special case: fields of data type “path” are handled differently. Say field “catinfo” is of data type “path. Along with “catinfo”, “catinfo1”, “catinfo2” etc will also be visible to user.
-
-2. **Custom Fields**
+5. **Custom Fields**
 
 Attributes that are not a part of our list of Feature Fields but part of your product catalog are known as Custom Fields. These attributes and their properties are included in your schema.
 
@@ -55,8 +54,8 @@ Field properties provides a quick glimpse of the attributes in your catalog and 
 
 Suppose we have a product ‘mobile phone’ for which the fields are defined as color, brand, and manufacturing date. Now, fields like ‘color’ and ‘brand’ can contain multiple values as colors can be red, blue, green and brand can be anything like  Apple, Samsung, or so. But the field ‘manufacturing date’ can have just one value as the date cannot contain multiple values. So, field properties are defined in a similar way.
 
-You can view the field properties for products  by navigating to **_Manage > Configure Site \> Field Properties_**.\
-\
+You can view the field properties for products  by navigating to **_Manage \> Configure Site \> Field Properties_**.
+
 The screen displays: 
 
 | **Attributes** | **Description**                                                                         |
