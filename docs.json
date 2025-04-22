@@ -96,17 +96,17 @@
               {
                 "group": "Content",
                 "pages": [
-                  "user-guides/merchandising/algorithms/content/Co",
-                  "user-guides/merchandising/algorithms/content/Phrase",
-                  "user-guides/merchandising/algorithms/content/Synonyms",
-                  "user-guides/merchandising/algorithms/content/Stemming"
+                  "user-guides/merchandising/Algorithms/Content/Co",
+                  "user-guides/merchandising/Algorithms/Content/Phrase",
+                  "user-guides/merchandising/aAlgorithms/Content/Synonyms",
+                  "user-guides/merchandising/Algorithms/Content/Stemming"
                 ]
               },
               {
                 "group": "Intent",
                 "pages": [
-                  "user-guides/merchandising/algorithms/Intent/MeasurementSearch",
-                  "user-guides/merchandising/algorithms/Intent/VectorSearch"
+                  "user-guides/merchandising/Algorithms/Intent/MeasurementSearch",
+                  "user-guides/merchandising/Algorithms/Intent/VectorSearch"
                 ]
               }
             ]
