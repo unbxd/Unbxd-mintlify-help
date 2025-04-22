@@ -3,9 +3,7 @@ title: "Analytics"
 description: "Description of your new file."
 ---
 
-Whether you’re a large enterprise or an SME (small-to-medium enterprise) online store owner, your resources are finite. As your business grows, your shoppers are looking for a retail experience that is intuitive and personalized.
-
- 
+Whether you’re a large enterprise or an SME (small-to-medium enterprise) online store owner, your resources are finite. As your business grows, your shoppers are looking for a retail experience that is intuitive and personalized. 
 
 Tracking visitor analytics and behaviour anonymously is critical to provide accurate and visitor-specific search and category page results.
 
@@ -39,8 +37,6 @@ var uid =  ‘uid-’ + date.getTime() + ‘-’ + Math.floor(Math.random() * 10
         return visitId;
   };
   ```
-
-
 - As mentioned above, visitId can be reset after shopper is idle for 30 mins and they should fire the visitor event again as in the below code for expire condition.\
   **Note:** It is mandatory is that you need to fire visitor event for Analytics, whenever the visitId is reset based on the expire logic.
 - **visit** – This stores whether the visitor is a ‘first_time’ or ‘repeat’ shopper. This cookie expires when the shopper is idle for more than 30 minutes.
