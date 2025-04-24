@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Netcore Unbxd",
   "colors": {
     "primary": "#fc5e01",
@@ -13,12 +13,6 @@
       {
         "tab": "Onboarding",
         "groups": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "GettingStarted/Introduction"
-            ]
-          },
           {
             "group": "Onboarding",
             "pages": [
@@ -53,7 +47,7 @@
         ]
       },
       {
-        "tab": "User Guide:Search",
+        "tab": "User Guides:Search",
         "groups": [
           {
             "group": "Merchandising Workbench",
@@ -72,75 +66,10 @@
                   "user-guides/merchandising/promotions/filter"
                 ]
               },
-              {
-                "group": "Collections",
-                "pages": [
-                  "user-guides/merchandising/collection/Introduction"
-                ]
-              },
-              {
-                "group": "Segments",
-                "pages": [
-                  "user-guides/merchandising/Segments/Introduction"
-                ]
-              },
               "user-guides/merchandising/banners",
               "user-guides/merchandising/facets",
               "user-guides/merchandising/redirects",
               "user-guides/merchandising/autosuggest"
-            ]
-          },
-          {
-            "group": "Algorithms",
-            "pages": [
-              {
-                "group": "Content",
-                "pages": [
-                  "user-guides/merchandising/Algorithms/Content/Co",
-                  "user-guides/merchandising/Algorithms/Content/Phrase",
-                  "user-guides/merchandising/Algorithms/Content/Synonyms",
-                  "user-guides/merchandising/Algorithms/Content/Stemming"
-                ]
-              },
-              {
-                "group": "Intent",
-                "pages": [
-                  "user-guides/merchandising/Algorithms/Intent/MeasurementSearch",
-                  "user-guides/merchandising/Algorithms/Intent/VectorSearch"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Manage",
-            "pages": [
-              {
-                "group": "Catalog",
-                "pages": [
-                  "user-guides/Manage/Catalog/CatalogManagement",
-                  "user-guides/Manage/Catalog/DimensionMapping",
-                  "user-guides/Manage/Catalog/FieldProperties"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "Search Preview",
-            "pages": [
-              "user-guides/SearchPreview/AI-meta-data",
-              "user-guides/SearchPreview/ProductCardMapping",
-              "user-guides/SearchPreview/VisualSearch"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "What's New",
-        "groups": [
-          {
-            "group": "Merchandising Workbench",
-            "pages": [
-              "user-guides/ReleaseNotes/Whatsnew"
             ]
           }
         ]

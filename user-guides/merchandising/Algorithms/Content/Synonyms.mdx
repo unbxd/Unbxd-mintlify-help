@@ -36,7 +36,7 @@ By understanding these scenarios, you can set up synonyms that reflect how your 
   What should synonyms not include?
 
   - **Empty record**: entry where there is no value entered (whitespace)
-  - **Symbols**: entries where only symbols are typed as the value. The following characters are not accepted by our system : ‘ , ‘ ( comma) , ‘\+’ (plus), ‘{‘, ‘}’ (curly braces), ‘\*’ (Asterix),’&’ (Ampersand) , ‘\\’ (backslash) 
+  - **Symbols**: entries where only symbols are typed as the value. The following characters are not accepted by our system : `,` ( comma) , `\+` (plus), `{`, `}` (curly braces), `\*` (Asterix),`&` (Ampersand) , `\\` (backslash) 
   - **Alphanumeric**: entries with only alphanumeric values. It should have text characters.
   - **Stopwords**: entries that contain just words that add no value like of, for, the, or any such stopwords.
   - **Redundant Synonyms**: entries that already exist. Don’t add two similar inputs.
@@ -49,45 +49,43 @@ By understanding these scenarios, you can set up synonyms that reflect how your 
   <Tab title="Two-Way Synonyms">
     These synonyms are bi-directional. When a shopper searches for any of the terms in the group, the search engine returns results for all related terms.
 
-    **Example**\
+    **Example**
     If **"pants"** and **"trousers"** are set as two-way synonyms, a search for either will return results for both.
   </Tab>
   <Tab title="One-Way Synonyms">
     These are uni-directional. A search for the **primary keyword** returns results for its synonyms, but not vice versa.
 
-    **Example**\
+    **Example**
     If **"ivory"** is a one-way synonym for **"white"**, then:
 
     - Searching for **“white running shoes”** will return both **white** and **ivory** shoes.
     - Searching for **“ivory running shoes”** will only return **ivory** shoes, not white.
-</Tab>
+  </Tab>
 </Tabs>
-    ### **Configure Synonyms**
 
-    Now that we know various use cases and types of synonyms let us understand how to configure these synonyms using the Unbxd console. 
+### **Configure Synonyms**
 
-    **To add synonyms (or a single synonym)**:
+Now that we know various use cases and types of synonyms let us understand how to configure these synonyms using the Unbxd console. 
 
-    1. Navigate to **_Content \> Synonyms_**_._
-    2. Click **Add a Synonym** to configure your keywords along with the synonyms.
-    3. Provide keywords for Synonyms in the **Type Search Keyword section.**
-    4. Provide queries in**One-Way Synonyms ** and **Two-way Synonyms.**
-    5. Click**Proceed ** to**save ** the configure Synonyms.
+**To add synonyms (or a single synonym)**:
 
-       ### Bulk Upload Synonyms
+1. Navigate to **_Content \> Synonyms_**_._
+2. Click **Add a Synonym** to configure your keywords along with the synonyms.
+3. Provide keywords for Synonyms in the **Type Search Keyword section.**
+4. Provide queries in \*\*One-Way Synonyms \*\*and **Two-way Synonyms.**
+5. Click \*\*Proceed to \*\*save the configure Synonyms.
 
-       With the **Bulk Upload Synonyms** feature, you can upload a list of synonyms. You can browse on your computer or use drag-and-drop. The supported upload format is **_.csv_**_._ 
+   ### Bulk Upload Synonyms
 
-       > It is advisable for first-time users to upload a list of synonyms already known to their previous search system so that they can handle all those instances in Unbxd search. 
+   With the **Bulk Upload Synonyms** feature, you can upload a list of synonyms. You can browse on your computer or use drag-and-drop. The supported upload format is **_.csv_**_._ 
 
-    Once uploaded, you can see the number of synonyms added. Using the Bulk Download Synonyms feature, you can also bulk download all the synonyms you have configured. A .csv file is downloaded. 
+   > It is advisable for first-time users to upload a list of synonyms already known to their previous search system so that they can handle all those instances in Unbxd search. 
 
-    ### **Delete a synonym**:
- 
+Once uploaded, you can see the number of synonyms added. Using the Bulk Download Synonyms feature, you can also bulk download all the synonyms you have configured. A .csv file is downloaded.
+
+### **Delete a synonym**:
 
 1. Navigate to **_Content \> Synonyms_**.
 2. Search for the keyword and click the hamburger icon next to it. 
 3. Click **_Delete_**, where you will receive a confirmation message for deletion. 
 4. Click **_Yes_** if confirmed or **_No_** otherwise.
-
- 
