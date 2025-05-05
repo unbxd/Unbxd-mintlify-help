@@ -79,12 +79,12 @@ Content-Type: application/json
 
 ## Error Codes
 
-| Status Code | Error Code       | Message                                      | Description                                                      |
-| :---------- | :--------------- | :------------------------------------------- | :--------------------------------------------------------------- |
-| `400`       | `invalid_params` | One or more query parameters are malformed   | Provided filter format is incorrect or unsupported field is used |
-| `401`       | `unauthorized`   | Missing or invalid authentication token      | Bearer token not provided or expired                             |
-| `403`       | `forbidden`      | Access to requested stores or data is denied | Token lacks permission for requested stores                      |
-| `500`       | `server_error`   | An unexpected error occurred                 | Contact support if issue persists                                |
+| Status Code | Error Code       | Message                                          | Description                                                         |
+| :---------- | :--------------- | :----------------------------------------------- | :------------------------------------------------------------------ |
+| `400`       | `invalid_params` | One or more query parameters are malformed       | Provided filter format is incorrect or an unsupported field is used |
+| `401`       | `unauthorized`   | Missing or invalid authentication token          | Bearer token not provided or expired                                |
+| `403`       | `forbidden`      | Access to the requested stores or data is denied | Token lacks permission for the requested stores                     |
+| `500`       | `server_error`   | An unexpected error occurred                     | Contact support if the issue persists                               |
 
 ## Best Practices
 
