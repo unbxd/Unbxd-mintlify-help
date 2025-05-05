@@ -27,9 +27,9 @@
             ]
           },
            {
-          "group": "Multi-Store-API",
+          "group": "Multi Store API",
           "pages": [
-            "onboarding/Multi-Store-API/Multi-Store-API"
+            "onboarding/API/Multi-Store-API/Multi-Store-API"
           ]
         },
           {
