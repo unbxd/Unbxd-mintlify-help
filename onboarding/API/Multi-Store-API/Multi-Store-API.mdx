@@ -42,49 +42,67 @@ The below example retrieves products from **store1** and **store2** and returns 
 - where **store_price \> 100**, and
 - products that are **currently available**.
 
-> GET / search store.ids=store1,store2&store.fields=store_price,store_availability&store.filter=store_price:[100 TO \*]&store.filter=store_availability:true HTTP/1.1 \
-> Host: [api.example.com](http://api.example.com) \
-> Authorization: Bearer eyJhbGciOi... \
-> Content Type: application/json
+`GET / search store.ids=store1,store2&store.fields=store_price,store_availability&store.filter=store_price:[100 TO *]&store.filter=store_availability:true HTTP/1.1 \
+Host: api.example.com \
+Authorization: Bearer eyJhbGciOi... \
+Content Type: application/json`
 
 ## Sample Successful Response 
 
-`{`
+```
+{
 
-`  "products": [`
+  "products": [
 
-`    {`
+    {
 
-`      "product_id": "prod_12345",`
+      "product_id": "prod_12345",
 
-`      "name": "Running Shoes",`
+      "name": "Running Shoes",
 
-`      "stores": [`
+      "stores": [
 
-`        {`
+        {
 
-`          "store_id": "store1",`
+          "store_id": "store1",
 
-`          "store_price": 120,`
+          "store_price": 120,
 
-`          "store_availability": true`
+          "store_availability": true
 
-`        },`
+        },
 
-`        {`
+        {
 
-`          "store_id": "store2",`
+          "store_id": "store2",
 
-`          "store_price": 130,`
+          "store_price": 130,
 
-`          "store_availability": true`
+          "store_availability": true
 
-`        }`
+        }
 
-`      ]`
+      ]
 
-`    }`
+    }
 
-`  ]`
+  ]
 
-`}`
+}
+```
+
+## Error Codes
+
+| Status Code | Error Code       | Message                                      | Description                                                      |
+| :---------- | :--------------- | :------------------------------------------- | :--------------------------------------------------------------- |
+| `400`       | `invalid_params` | One or more query parameters are malformed   | Provided filter format is incorrect or unsupported field is used |
+| `401`       | `unauthorized`   | Missing or invalid authentication token      | Bearer token not provided or expired                             |
+| `403`       | `forbidden`      | Access to requested stores or data is denied | Token lacks permission for requested stores                      |
+| `500`       | `server_error`   | An unexpected error occurred                 | Contact support if issue persists                                |
+
+## Best Practices
+
+- Use`store.ids` over multiple `store.id` parameters for readability.
+- Use `store.fields` to avoid bloated responses.
+- Avoid over-filtering in a single request, as it may impact performance.
+- You can combine filters carefully to fine-tune your results.
