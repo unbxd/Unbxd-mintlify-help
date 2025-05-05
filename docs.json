@@ -26,6 +26,12 @@
               "onboarding/js-sdk"
             ]
           },
+           {
+          "group": "Multi store API",
+          "pages": [
+            "onboarding/Multi store API/Multi-store-API"
+          ]
+        },
           {
             "group": "V2 Analytics Integration",
             "pages": [
