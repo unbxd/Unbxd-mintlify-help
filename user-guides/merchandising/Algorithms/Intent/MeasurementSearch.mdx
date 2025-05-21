@@ -12,7 +12,7 @@ _For example,_ if you have a search query: "28 inch denim jeans".  Here, "**28 i
 **Search Context:** The system understands that the user is looking for jeans that have a waist measurement of **28 inches**. This is a clear, quantifiable search attribute (the waist size) that the system can use to filter and narrow down the results.
 **Measurable Dimension:** A specific, quantifiable attribute of a product (such as size, weight, or price) that can be used to filter or refine search results based on exact values or units.
 
-## Impact of Vector Search
+## Impact of Measurement Search
 
 - **Refined Search Results:**
   By setting exact dimensions like **width**, **weight**, and **price**, you can **narrow down** the search to products that meet all your specific needs.
@@ -45,13 +45,13 @@ _For example,_ if you have a search query: "28 inch denim jeans".  Here, "**28 i
 
    | Dimension    | Unit                                                                                                             |
    | :----------- | :--------------------------------------------------------------------------------------------------------------- |
-   | Price        | usd, aud, cad, sgd, gbp, cent, $, €, £, ₹                                                                        |
+   | Price        | usd, aud, cad, sgd, gbp, cent, \$, €, £, ₹                                                                       |
    | Size         | mm, cm, m, mi, in, ft, mm2, cm2, m2, mi2, in2, ft2, mm3, cm3, m3, mi3, in3, ft3, l, fl oz, gal, qt, pt, bbl, tsp |
    | Weight       | mg, g, kg, lb, oz                                                                                                |
    | Pressure     | pa, kpa, atm, torr, bar, psi, mmhg, psia, psig, ksi                                                              |
    | Product Info | b, kb, mb, gb, tb, pb, eb, ib, kib, mib, gib, tib, pib, eib                                                      |
 5. **Default Configuration**: This is used to power the queries that do not have a dimension attribute.
-For example, your search query is "**red shirt under 10**". Here, the user/merchandiser must set up a default dimension (Price or Size, in this case) so that the search result displays products with a price less than $10 or products with a size less than ten.
+   For example, your search query is "**red shirt under 10**". Here, the user/merchandiser must set up a default dimension (Price or Size, in this case) so that the search result displays products with a price less than \$10 or products with a size less than ten.
 6. **Tolerance configuration**: It is a flexibility factor that gives you better search results. Currently, the query builder follows a configurable normalization range of ±10%.
 
 After the type of strategy is decided, click **Save** configuration and click **Sync** to add measurement search configurations to your search.
