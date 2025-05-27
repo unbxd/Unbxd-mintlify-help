@@ -93,7 +93,8 @@
               "user-guides/merchandising/banners",
               "user-guides/merchandising/facets",
               "user-guides/merchandising/redirects",
-              "user-guides/merchandising/autosuggest"
+              "user-guides/merchandising/autosuggest",
+              "user-guides/merchandising/Quizzing"
             ]
           },
           {
@@ -135,7 +136,10 @@
             "pages": [
               "user-guides/SearchPreview/AI-meta-data",
               "user-guides/SearchPreview/ProductCardMapping",
-              "user-guides/SearchPreview/VisualSearch"
+              "user-guides/SearchPreview/VisualSearch",
+              "user-guides/SearchPreview/Attribute-Enrichment",
+              "user-guides/SearchPreview/Product-Badging",
+              "user-guides/SearchPreview/Shopping-Assistant"
             ]
           }
         ]
