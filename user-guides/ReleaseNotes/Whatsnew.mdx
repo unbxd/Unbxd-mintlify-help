@@ -7,7 +7,7 @@ description: "Stay ahead with Netcore Unbxd's latest releases"
 
 Netcore Unbxd continuously evolves to help you deliver more intelligent, personalized shopping experiences. In this section, you'll find the latest feature rollouts, performance enhancements, and platform updates designed to optimize product discovery, boost conversions, and elevate the customer journey.
 
-# April 2025
+# April- May 2025
 
 ### **OWASP Compliance for Search/Browse Console**
 
@@ -18,10 +18,6 @@ This enhancement reflects our ongoing commitment to protecting customer data and
 <Check>
   No action is required from customers. These improvements have been implemented at the platform level and are automatically applied.
 </Check>
-
-## V 1.22
-
-### **Release date: April**
 
 ### 1. Vector Search for Smarter Product Discovery
 
@@ -51,18 +47,18 @@ Even if these attributes aren’t manually added to your catalog, the preview fu
 
 This works in synergy with the following Unbxd AI Models:
 
-| Model              | Function                                                                                                   |
-| :----------------- | :--------------------------------------------------------------------------------------------------------- |
-| **Content Model**  | Analyzes catalog data to structure and enrich it using attributes like title, color, size, brand, etc.     |
-| **Intent Model**   | Understands the shopper’s true intent, even in natural language queries like “ergonomic chair under $200”. |
-| **Ranking Model**  | Scores products based on relevance, user engagement, and availability to determine result order.           |
-| **Fallback Model** | Uses semantic understanding to return related results when exact matches are unavailable.                  |
+| Model              | Function                                                                                                    |
+| :----------------- | :---------------------------------------------------------------------------------------------------------- |
+| **Content Model**  | Analyzes catalog data to structure and enrich it using attributes like title, color, size, brand, etc.      |
+| **Intent Model**   | Understands the shopper’s true intent, even in natural language queries like “ergonomic chair under \$200”. |
+| **Ranking Model**  | Scores products based on relevance, user engagement, and availability to determine result order.            |
+| **Fallback Model** | Uses semantic understanding to return related results when exact matches are unavailable.                   |
 
 For more information, refer to the [documentation](https://docs.netcoreunbxd.com/user-guides/SearchPreview/AI-meta-data).
 
-### 4. AI-Suggested Queries
+### 4. AI-Suggested Similar Queries
 
-We are excited to announce **AI-Suggested Queries** to help improve the shopper experience by surfacing relevant, intent-driven search suggestions.\
+We are excited to announce **AI-Suggested Similar Queries** to help improve the shopper experience by surfacing relevant, intent-driven search suggestions.\
 **What it does:**
 
 - Recommends additional search terms and category-based suggestions based on past user behavior, search trends, and semantic understanding.
@@ -106,3 +102,131 @@ We are excited to announce the **General Availability** of the **Bulk Export/Imp
 Whether you're working across multiple environments or updating field properties for large product catalogs, this feature simplifies the process and ensures consistency in your configuration strategy.
 
 Click [here](https://docs.netcoreunbxd.com/user-guides/Manage/Catalog/FieldProperties#key-features-of-field-configuration) to know more.
+
+### 8. Bulk Upload for Searchable Fields
+
+We have introduced bulk upload and bulk download of searchable fields under **Manage** section.
+
+# January - February 2025
+
+Refer [here](https://docs.google.com/document/d/1nvsnfnc2Ku7Kqj7bcGf79OSE-beu1OOF/edit?usp=drive_link&ouid=115334294807735312609&rtpof=true&sd=true) for detailed documentation for the below.
+
+### 1. Enhanced Browse Preview
+
+We're making category exploration smarter than ever\! The new **Category Picker Widget** lets you effortlessly generate category paths from:
+
+- Analytics
+- Field Names
+- Predefined values
+  It gives you a rich **Campaign Insight Section** giving you a complete view of campaigns tied to these paths complete with key performance metrics.
+
+### 2. Smarter Site Picker Experience
+
+Finding your site just got easier. Sites are now grouped in a neat **accordion view by region**, helping you quickly navigate and manage them without the clutter.
+
+### 3. Enhanced Merchandising Enhancements
+
+We’ve streamlined how you manage merchandising campaigns by introducing the **Kebab (፧) menus** on the Promotions page. Now you can **Apply same rule to more queries**
+or **Add another campaign** with a click. We also have enhanced **New Preview Options** for Search and Browse
+
+- _Note: Only available for live campaigns._
+
+### 4. Date and Time Experience
+
+Wherever you see a timestamp, you’ll now also see the **associated time zone** as well, making logs and tracking more transparent.
+
+### 5. Friendlier Toast Notifications
+
+We’re saying goodbye to intrusive error banners. Errors now show as **floating footers** that gently fade away after a few seconds, which are informative but non-intrusive.
+
+### 6. Fields Sorting
+
+Have full control and clarity in your configuration by easily organizing your settings by sorting **Field Names** alphabetically or \*\*Search Weight \*\*by priority from High to Non-searchable, or the other way around.
+
+### 7. Unified and Improved Admin Portal
+
+Admin tasks just got more intuitive. A **consolidated portal** now manages all admin activities seamlessly. Menus have been reorganized for clarity, and Legacy items like **Back to Site Details** have been retired for better usability.
+
+Highlights:
+
+- **Info** is now **Site Details.**
+- Users are now managed under **Profile Icon \> Unbxd Team Management.**
+- **Products**, **Merch Settings**, and **Site Features** moved under **Site Settings.**
+- New **Analytics page** to view aggregator API errors.
+
+### 8. Better Navigation for Catalogs
+
+Quick access, right where you expect it\! **Catalog** has moved to: **Manage** \> **Catalog** \> **Feed Status**
+
+### 9. Cleaner Segments Table
+
+Clarity meets function. The **Segments table** has been redesigned to improve readability and interaction.
+
+### 10. Upload & Download Made Simple
+
+Now even more intuitive. **Bulk Upload** and **Bulk Download** are now **separate menu items**, reducing confusion and improving workflow clarity.
+
+### 11. Clean Website Preview
+
+A clutter-free preview experience. We’ve removed the **Website Preview footer** for a cleaner visual display.
+
+### 12. More intelligent Table Behavior Across the Platform
+
+Tables now work the way you'd expect\!
+
+- **Page state** is retained on refresh
+- **Pagination** and **filtering** added across all Phoenix tables (except ROR)
+
+### 13. Complete Facet Flow Revamp
+
+Facets are now faster and easier to manage — all from one place\!
+
+- No need to toggle across pages. You can manage CRED operations directly in **Merchandising \> Facets**. Just configure **Field Rule** and **Facetable** flags in **Field Properties**, and you're set\! You can also add and rank facetable fields effortlessly using a clean, guided flow
+
+### 14. Stronger Password & Session Policies
+
+Security gets a serious upgrade\! New password rules have been introduced:
+
+- Minimum 12 characters.
+- Mix of upper/lowercase, numbers, special characters.
+- Common passwords blocked.
+- All sessions are logged out upon password reset.
+- Only **one active session** allowed by default.
+- Automatic logout of oldest session when limits are exceeded.
+- **Unlock button** available in Admin for account recovery.
+
+### 15. Streamlined Searchable Fields Workflow
+
+Simplicity at its best. We’ve removed the **Apply** button; now, **Save Changes** is your go-to action. Easily compare with **AI Recommended Search Weight** before publishing changes
+
+### 16. UI & UX Improvements Everywhere
+
+A more polished, intuitive experience:
+
+- Updated **No Data Found** images.
+- Removed “Add Facets” from FTU to prevent confusion.
+- Dropdown improvements in Segments and Attributes.
+- For long value lists, you now get an **input field** instead of an empty dropdown.
+- **Global** is now**Applied to all users**  across the platform.
+- **Typeahead** is now **Autosuggest**; **Commerce Search** is now simply **Search**.
+- New **Sync** button to re-index **Autosuggest** feed immediately after config changes.
+
+### 17. A/B Testing Metric Labels – Refreshed and Reframed
+
+### Search Metrics
+
+Refer to the table below for the changes:
+
+| Old Label          | New Label      | Definition                         |
+| ------------------ | -------------- | ---------------------------------- |
+| HITS               | Page Views     | Category page views                |
+| CLICKS             | Clicks         | Product clicks on browse pages     |
+| CLICK THROUGH RATE | Click Rate     | Clicks / Page Views                |
+| CART               | Carts          | Products added to cart from browse |
+| CART THROUGH RATE  | Cart Rate      | Carts / Page Views                 |
+| ORDERS             | Sale Through   | Orders after browsing              |
+| REVENUE            | Revenue        | Revenue from browse                |
+| CONV RATE          | Conversion (%) | Sale Through / Page Views          |
+| CTR                | CTR (%)        | Clicks / Page Views                |
+| AOV                | AOV            | Revenue / Sale Through             |
+| RPV                | RPV            | Revenue / Page Views               |
