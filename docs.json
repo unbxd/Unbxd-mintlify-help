@@ -26,12 +26,12 @@
               "onboarding/js-sdk"
             ]
           },
-           {
-          "group": "Multi Store API",
-          "pages": [
-            "onboarding/API/Multi-Store-API/Multi-Store-API"
-          ]
-        },
+          {
+            "group": "Multi Store API",
+            "pages": [
+              "onboarding/API/Multi-Store-API/Multi-Store-API"
+            ]
+          },
           {
             "group": "V2 Analytics Integration",
             "pages": [
@@ -61,6 +61,21 @@
       {
         "tab": "User Guide:Search",
         "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "user-guides/search/getting-started/introduction",
+              "user-guides/search/getting-started/setup",
+              "user-guides/search/getting-started/features-overview",
+              {
+                "group": "2FA Setup",
+                "pages": [
+                  "GettingStarted/2fa",
+                  "GettingStarted/2fa-faqs"
+                ]
+              }
+            ]
+          },
           {
             "group": "Merchandising Workbench",
             "pages": [
