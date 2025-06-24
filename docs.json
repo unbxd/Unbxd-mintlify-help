@@ -66,14 +66,7 @@
             "pages": [
               "user-guides/search/getting-started/introduction",
               "user-guides/search/getting-started/setup",
-              "user-guides/search/getting-started/features-overview",
-              {
-                "group": "2FA Setup",
-                "pages": [
-                  "GettingStarted/2fa",
-                  "GettingStarted/2fa-faqs"
-                ]
-              }
+              "user-guides/search/getting-started/features-overview"
             ]
           },
           {
