@@ -90,24 +90,44 @@ Once uploaded, you can see the number of synonyms added. Using the Bulk Download
 3. Click **_Delete_**, where you will receive a confirmation message for deletion. 
 4. Click **_Yes_** if confirmed or **_No_** otherwise.
 
-## **Spellcheck Override**
+## **Index Time Synonyms**
 
-**Spellcheck Override** is a rule-based control that allows merchandisers to **override automatic spell correction** for specific search queries or terms. This ensures that intentionally unique or brand-specific terms are not auto-corrected, preserving the intended search behavior and improving result accuracy for niche or custom product names.
+The **Index Time Synonym** feature is designed to improve search recall by adding synonym keywords to the search index during the **full feed** or **re-indexing** process. These synonyms help to map multiple terms with the same meaning, ensuring that users can find relevant products, even if they use different words in their search queries.
 
-![image.png](/images/image.png)
+### **Prerequisites**
 
-Once enabled, click on **Add Keywords** to override specific keywords to stop suggesting similar queries. Below is use case scenarios accepted for Spellcheck override.
+Before using the Index Time Synonyms feature, ensure that the following prerequisites are met:
 
-| **Use Case**                     | **Description**                                                                                                                                                                 |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Single-Word (Token) Handling** | The system applies to single-word (one-token) terms only. Multi-word phrases are not processed by this setup. For Example: "**kursi**" is valid, while "**long briefs**" is not |
-| **Camel Casing**                 | Camel casing is automatically handled during query parsing. Camel-cased words are treated as single terms for search.                                                           |
-| **Special Character Handling**   | Special characters like apostrophes, hyphens, etc., are handled automatically during query parsing, ensuring they do not interfere with the search process.                     |
+1. Configure your synonym relationships in the dashboard.
+2. This feature is applied during the full feed or re-indexing process, meaning the system will only index synonyms when a feed is ingested or a re-indexing job is triggered.
 
-Below functionality is available on the dashboard of Spellcheck:
+### **How it works**
 
-| **Operation**     | **Description**                                                                                                                                               |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Search**        | Allows users to search for specific data entries or products within the system. This feature enables efficient navigation through large datasets.             |
-| **Bulk Upload**   | Allows users to upload multiple files or data entries at once. This is used to efficiently update or add a large amount of data to the system.                |
-| **Bulk Download** | Allows users to download multiple files or data entries at once. This operation is typically used for exporting large sets of data for analysis or reporting. |
+This feature is accessible only to Unbxd Admin users. Log in to Netcore Unbxd Dashboard and navigate to **Algorithm** \> **Content**\> **Synonym**.
+
+Below is step by step workflow on Index Time Synonym:
+
+| Step                                                   | Description                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Synonym Mapping Input**                              | Merchandisers define synonym relationships through the dashboard. **Examples** <br />• _Unidirectional Synonyms_: `"pants → trousers, slacks, long briefs"`<br />• _Bidirectional Synonyms_: `"pants ↔ trousers ↔ slacks ↔ long briefs"` These mappings are then passed to the backend system for indexing.                                                              |
+| **Building the Inverted Synonym Trie**                 | During feed ingestion, the system constructs an inverted synonym mapping based on the configured relationships. **Examples**: <br />• _Unidirectional_: `"trousers → pants"`, `"slacks → pants"`, `"long briefs → pants"` <br />• _Bidirectional_: `"trousers → pants, slacks, long briefs"`, `"pants → trousers, slacks, long briefs"`, and so on.                      |
+| **Synonym Transformer Processing**                     | The Synonym Transformer processes searchable fields (like product titles and descriptions) using a maximum window size of 3 words.<br /><br /> **Note**: Only **Single-token synonyms** are indexed. Multi-word synonyms (e.g., `"long briefs"`) are ignored.                                                                                                            |
+| **Indexing into **`syn_unx_tpm`**and ** `syn_unx_auto` | Valid single-token synonyms are indexed into: <br />• `syn_unx_tpm` → for search queries <br />• `syn_unx_auto` → for autosuggest queries <br /><br />**Example**: If the product title is `"slacks"` and the mapping is `"pants → slacks"`, then `"pants"` is indexed into `syn_unx_tpm`<br /><br />**Note**: Multi-word synonyms like `"long briefs"` are not indexed. |
+
+## FAQ & Troubleshoot
+
+<Accordion title="When should I use Index Time Synonym?">
+  Index Time Synonym is best used when you have a large number of synonyms to be indexed (e.g., 25\+). It’s particularly useful during the onboarding process as feeds are indexed regularly.
+</Accordion>
+
+<Accordion title="Can I index multi-word synonyms?">
+  No, the system only processes and indexes single-token synonyms (e.g., "pants" → "slacks"). Multi-word synonyms like "long briefs" are not indexed to avoid noise in the system.
+</Accordion>
+
+<Accordion title="What happens if I add synonyms after the feed is ingested?">
+  If you add new synonyms after a feed has already been ingested, they will be indexed only during the next full feed or re-indexing cycle.
+</Accordion>
+
+<Accordion title="How often should I refresh the synonyms?">
+  Synonyms are typically refreshed during full feeds or delta feeds, which are indexed regularly. Ensure the feed is ingested at appropriate intervals to keep the synonym mappings up-to-date.
+</Accordion>
