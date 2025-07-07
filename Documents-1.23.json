@@ -1,0 +1,203 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Netcore Unbxd",
+  "colors": {
+    "primary": "#fc5e01",
+    "light": "#fc5e01",
+    "dark": "#fc5e01"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Onboarding",
+        "groups": [
+          {
+            "group": "Onboarding",
+            "pages": [
+              "onboarding/react-sdk",
+              "onboarding/js-sdk"
+            ]
+          },
+          {
+            "group": "V2 Analytics Integration",
+            "pages": [
+              "integrations/overview",
+              {
+                "group": "Analytics Integration Methods",
+                "pages": [
+                  "integrations/what-is-pulse",
+                  {
+                    "group": "API Integration",
+                    "pages": [
+                      "integrations/api-integration/overview",
+                      "integrations/api-integration/common-attributes",
+                      "integrations/api-integration/event-specific-attributes",
+                      "integrations/api-integration/autosuggest-events"
+                    ]
+                  },
+                  "integrations/javascript-integration",
+                  "integrations/gtm-integration"
+                ]
+              },
+              "integrations/compliance"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "User Guide:Search",
+        "groups": [
+          {
+            "group": "Merchandising Workbench",
+            "pages": [
+              "user-guides/merchandising/introduction",
+              {
+                "group": "Promote Products",
+                "pages": [
+                  "user-guides/merchandising/promotions/overview",
+                  "user-guides/merchandising/promotions/global-rule",
+                  "user-guides/merchandising/promotions/add-promotions",
+                  "user-guides/merchandising/promotions/boost",
+                  "user-guides/merchandising/promotions/pin",
+                  "user-guides/merchandising/promotions/sort",
+                  "user-guides/merchandising/promotions/slot",
+                  "user-guides/merchandising/promotions/filter"
+                ]
+              },
+              {
+                 "group": "Preview",
+                 "pages": [
+                   "user-guides/SearchPreview/AI-meta-data",
+				   "user-guides/SearchPreview/ProductCardMapping",
+				   "user-guides/SearchPreview/VisualSearch",
+                   "user-guides/SearchPreview/Attribute-Enrichment",
+                   "user-guides/SearchPreview/ProductCardMapping"
+                 ]
+              },
+			  {
+                 "group": "Collections",
+                 "pages": [
+                   "user-guides/merchandising/collection/Introduction"
+                 ]
+              },
+              {
+                 "group": "Segments",
+                 "pages": [
+                   "user-guides/merchandising/Segments/Introduction"
+                 ]
+              },
+              "user-guides/merchandising/banners",
+              "user-guides/merchandising/facets",
+              "user-guides/merchandising/redirects",
+              "user-guides/merchandising/autosuggest"
+            ]
+          },
+          {
+            "group": "Algorithms",
+            "pages": [
+              {
+                "group": "Content",
+                "pages": [
+                  "user-guides/merchandising/Algorithms/Content/Co",
+                  "user-guides/merchandising/Algorithms/Content/Phrase",
+                  "user-guides/merchandising/Algorithms/Content/Synonyms",
+                  "user-guides/merchandising/Algorithms/Content/Stemming",
+                  "user-guides/merchandising/Algorithms/Content/Spell-Check-Override"
+                ]
+              },
+              {
+                "group": "Intent",
+                "pages": [
+                  "user-guides/merchandising/Algorithms/Intent/MeasurementSearch",
+                  "user-guides/merchandising/Algorithms/Intent/VectorSearch"
+                ]
+              }
+            ]
+          },
+          {
+             "group": "Manage",
+             "pages": [
+               {
+                 "group": "Catalog",
+                 "pages": [
+                   "user-guides/Manage/Catalog/CatalogManagement",
+                   "user-guides/Manage/Catalog/DimensionMapping",
+                   "user-guides/Manage/Catalog/FieldProperties"
+                 ]
+               }
+             ]
+           }
+        ]
+      },
+      {
+        "tab": "What's New",
+        "groups": [
+          {
+            "group": "Onboarding",
+            "pages": [
+              "GettingStarted/Introduction"
+            ]
+          }
+        ]
+      },
+	  {
+        "tab": "Introduction",
+        "groups": [
+          {
+            "group": "Merchandising Workbench",
+            "pages": [
+              "user-guides/ReleaseNotes/Whatsnew"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Webinars",
+          "href": "https://netcoreunbxd.com/webinars/",
+          "icon": "video"
+        },
+        {
+          "anchor": "Contact Us",
+          "href": "https://netcoreunbxd.com/contact-us/",
+          "icon": "headset"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://netcoreunbxd.com/blogs/",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Login",
+        "href": "https://console.unbxd.io/"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Request Demo",
+      "href": "https://netcoreunbxd.com/demo"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/unbxd-inc"
+    }
+  },
+  "fonts": {
+    "family": "Manrope",
+    "weight": 400
+  }
+}
