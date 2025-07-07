@@ -89,3 +89,25 @@ Once uploaded, you can see the number of synonyms added. Using the Bulk Download
 2. Search for the keyword and click the hamburger icon next to it. 
 3. Click **_Delete_**, where you will receive a confirmation message for deletion. 
 4. Click **_Yes_** if confirmed or **_No_** otherwise.
+
+## **Spellcheck Override**
+
+**Spellcheck Override** is a rule-based control that allows merchandisers to **override automatic spell correction** for specific search queries or terms. This ensures that intentionally unique or brand-specific terms are not auto-corrected, preserving the intended search behavior and improving result accuracy for niche or custom product names.
+
+![image.png](/images/image.png)
+
+Once enabled, click on **Add Keywords** to override specific keywords to stop suggesting similar queries. Below is use case scenarios accepted for Spellcheck override.
+
+| **Use Case**                     | **Description**                                                                                                                                                                 |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Single-Word (Token) Handling** | The system applies to single-word (one-token) terms only. Multi-word phrases are not processed by this setup. For Example: "**kursi**" is valid, while "**long briefs**" is not |
+| **Camel Casing**                 | Camel casing is automatically handled during query parsing. Camel-cased words are treated as single terms for search.                                                           |
+| **Special Character Handling**   | Special characters like apostrophes, hyphens, etc., are handled automatically during query parsing, ensuring they do not interfere with the search process.                     |
+
+Below functionality is available on the dashboard of Spellcheck:
+
+| **Operation**     | **Description**                                                                                                                                               |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Search**        | Allows users to search for specific data entries or products within the system. This feature enables efficient navigation through large datasets.             |
+| **Bulk Upload**   | Allows users to upload multiple files or data entries at once. This is used to efficiently update or add a large amount of data to the system.                |
+| **Bulk Download** | Allows users to download multiple files or data entries at once. This operation is typically used for exporting large sets of data for analysis or reporting. |
