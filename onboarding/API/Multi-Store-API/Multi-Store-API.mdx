@@ -1,0 +1,94 @@
+---
+title: "Search: Multi-Store-API"
+description: "Fetch products across multiple stores with a single, flexible search query."
+---
+
+## Overview
+
+This API allows you to search and filter products across multiple stores using store-specific parameters. You can control which stores to include, specify which store-level fields to retrieve, and apply filters at the store level.
+
+## **HTTP Method**
+
+This API uses the **GET** method at the endpoint search to search and filter products.
+
+## API Endpoint
+
+The base URL for Multi-Store-API is `https://api.example.com/search`
+
+## Parameters
+
+### Header Parameters
+
+Below parameters should pass in the **HTTP headers** of an API request.
+
+| Header Name     | Type   | Description                                   | Example Value                                    | Required |
+| :-------------- | :----- | :-------------------------------------------- | :----------------------------------------------- | :------- |
+| `Authorization` | String | Bearer token used for authenticating the user | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` | Yes      |
+| `Content-Type`  | String | Specifies the format of the request data      | `application/json`                               | Yes      |
+
+## Query Parameters
+
+| Parameter      | Type   | Description                                                                             | Example                                                                    | Required |
+| :------------- | :----- | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- | :------- |
+| `store.id`     | String | Specify a single store. Can be used multiple times to specify multiple stores           | `store.id=store1&store.id=store2`                                          | Yes      |
+| `store.ids`    | String | Comma_separated list of store IDs (alternative to using multiple `store.id` parameters) | `store.ids=store1,store2,store3`                                           | Yes      |
+| `store.fields` | String | Comma_separated list of store level fields to include in the response                   | `store.fields=store_price,store_availability`                              | Yes      |
+| `store.filter` | String | Store level filters, supports multiple values combined via AND logic                    | `store.filter=store_price:[100 TO *]&store.filter=store_availability:true` | Yes      |
+
+## Example Request Body
+
+The below example retrieves products from **store1** and **store2** and returns only the store-level fields **store_price** and **store_availability**, and filters for products:
+
+- where **store_price \> 100**, and
+- products that are **currently available**.
+
+```vbnet
+GET /search?store.ids=store1,store2&store.fields=store_price,store_availability&store.filter=store_price:[100 TO *]&store.filter=store_availability:true HTTP/1.1
+
+Host: api.example.com
+
+Authorization: Bearer eyJhbGciOi...
+
+Content-Type: application/json
+```
+
+## Sample Successful Response
+
+```json
+{
+  "products": [
+    {
+      "product_id": "prod_12345",
+      "name": "Running Shoes",
+      "stores": [
+        {
+          "store_id": "store1",
+          "store_price": 120,
+          "store_availability": true
+        },
+        {
+          "store_id": "store2",
+          "store_price": 130,
+          "store_availability": true
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Error Codes
+
+| Status Code | Error Code       | Message                                          | Description                                                         |
+| :---------- | :--------------- | :----------------------------------------------- | :------------------------------------------------------------------ |
+| `400`       | `invalid_params` | One or more query parameters are malformed       | Provided filter format is incorrect or an unsupported field is used |
+| `401`       | `unauthorized`   | Missing or invalid authentication token          | Bearer token not provided or expired                                |
+| `403`       | `forbidden`      | Access to the requested stores or data is denied | Token lacks permission for the requested stores                     |
+| `500`       | `server_error`   | An unexpected error occurred                     | Contact support if the issue persists                               |
+
+## Best Practices
+
+- Use`store.ids` over multiple `store.id` parameters for readability.
+- Use `store.fields` to avoid bloated responses.
+- Avoid over-filtering in a single request, as it may impact performance.
+- You can combine filters carefully to fine-tune your results.

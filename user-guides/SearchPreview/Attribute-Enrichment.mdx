@@ -1,28 +1,226 @@
 ---
 title: "Attribute Enrichment"
+description: "Leverages AI to automatically fill in missing or incomplete product attributes, enhancing search visibility and improving product discoverability."
 ---
 
-### Benefits
+# Overview
 
-- **Improved Product Discovery:** Enriched attributes enable more relevant search results, helping shoppers find the right products faster.
-- **Increased Revenue:** Better search relevance drives higher Revenue Per Visitor (RPV) and Average Order Value (AOV).
-- **Efficiency for Merchandisers:** Automating manual data tasks frees up valuable time, allowing merchandisers to focus on strategic initiatives.
-- **Continuous Improvement:** Easily review, manage, and analyze enriched product data to optimize search performance and key metrics over time.
+The **Attribute Enrichment** in the console aims to enhance catalog completeness for optimal search performance. This dashboard facilitates the identification of missing or incomplete attributes in product catalogs, providing detailed metrics and allowing merchandisers to prioritize enrichment efforts. It presents various attributes, their status, and their impact on search performance.
 
-### How It Works
+## Why is this Useful?
 
-Our attribute enrichment technology combines advanced AI techniques with your merchandising expertise to:
+Merchandisers often struggle with incomplete or inconsistent product data, such as missing attributes for key categories like **material** for a **T-shirt** or **screen size** for a **Smartwatch**. These gaps can lead to:
 
-- Augment existing product attributes.
-- Generate new attributes and categories where data is missing.
-- Standardize and correct inconsistent product information.
+\* **Poor Search Relevance**: Customers might not find products if key attributes are missing.
 
-### Getting Started
+\* **Reduced Discoverability**: Filters and facets relying on these attributes won't function effectively.
 
-- **Analyze Your Data:** Use Unbxd’s tools to assess the quality of your product data and search results.
-- **Manage Attributes:** Access an intuitive dashboard to review and control enriched attributes.
-- **Optimize Continuously:** Monitor key performance indicators (KPIs) and refine enrichment rules as needed to maximize impact.
+\* **Inconsistent Product Information**: Leading to a fragmented customer experience.
 
-### Next Steps
+**AI Suggested Redirects** leverages advanced strategies to intelligently suggest redirects based on past search patterns, filling in these gaps and improving product visibility. This ensures a smoother and more relevant shopping experience for your customers.
 
-Leverage Attribute Enrichment to boost your e-commerce platform’s search experience and overall conversion metrics. For a personalized walkthrough, consider booking a demo or requesting a search experience audit through your Unbxd account.
+## Product Enrichment Strategies
+
+The Netcore Unbxd console offers four core enrichment strategies to help you optimize and enhance your product catalog.
+
+1. **Large Language Models (LLMs)**
+
+This strategy harnesses the power of **Large Language Models (LLMs)** to intelligently generate new, missing product fields based on existing information in your catalog. It's ideal for creating descriptive content or structured data points that are not readily available.
+
+For Example: For a **"Smartwatch"** missing the "battery life" attribute, the LLM analyzes the product description, such as "Up to 48 hours of usage on a single charge," and automatically adds the missing "battery life" data.
+
+2. **Google Translator Enrichment**
+
+This strategy enables the translation of existing product fields from one language (typically English) into a specified target language. It helps expand your e-commerce presence into new markets and provides localized search experiences by generating multilingual product data.
+
+For Example: **Original Product Data**
+
+<CodeGroup>
+
+```Original Product Block
+{  
+  "id": "PROD123",  
+  "product_type": "Smartwatch",  
+  "enr_unx_ar_translate_product_type": "ساعة ذكية"  
+} 
+```
+
+
+```Enriched Product Data (after translation)
+{  
+  "id": "PROD123",  
+  "product_type": "Smartwatch",  
+  "enr_unx_ar_translate_product_type": "ساعة ذكية"  
+} 
+```
+
+</CodeGroup>
+
+3. **Transliterate Enrichment**
+
+The Transliterate Enrichment strategy converts text from one script to another while preserving phonetic pronunciation. This is especially useful for search queries where users might type foreign words using English characters. It differs from translation by changing the script, not the meaning.
+
+For Example : 1. **English to Hindi Transliteration**
+
+<CodeGroup>
+
+```Original Product Block
+{  
+  "id": "GROCERY456",  
+  "product_name": "Chawal"  
+}  
+```
+
+
+```Enriched Product Data (after Transliterate processing):
+{  
+  "id": "GROCERY456",  
+  "product_name": "Chawal",  
+  "enr_unx_hi_translit_product_name": "Rice"  
+}  
+```
+
+</CodeGroup>
+
+For Example: 2. **Latin Script - Similar to Translation**
+
+<CodeGroup>
+
+```Original Product Block
+{  
+  "id": "PROD123",  
+  "product_type": "Smartwatch"  
+}  
+```
+
+
+````Enriched Product Data (after Transliterate processing):
+{  
+  "id": "PROD123",  
+  "product_type": "Smartwatch",  
+  "enr_unx_es_translit_product_type": "Reloj inteligente"  
+}  
+```  | 
+
+This format simplifies the explanation and example for users, making it easy to understand the functionality of the **Transliterate Enrichment** strategy.
+````
+
+</CodeGroup>
+
+4. **SEO Keyword Enrichment**:
+
+The SEO Keyword Enrichment strategy uses Large Language Models (LLM) to generate relevant SEO keywords for your products based on existing product data. These keywords help improve your product's visibility in organic search results, driving more traffic to your e-commerce site.
+
+For Example: **Configuration from fields: product_title, description, category**
+
+<CodeGroup>
+
+```Original Product Block
+{  
+  "id": "PROD789",  
+  "product_title": "Organic Cotton Baby Bodysuit",  
+  "description": "Soft and breathable 100% organic cotton bodysuit for infants aged 0-6 months. Features snap closures for easy diaper changes and a cute animal print. Perfect for sensitive skin.",  
+  "category": "Baby Clothing"  
+} 
+```
+
+
+````Enriched Product Data (after SEO Keyword processing)
+{  
+  "id": "PROD789",  
+  "product_title": "Organic Cotton Baby Bodysuit",  
+  "description": "Soft and breathable 100% organic cotton bodysuit for infants aged 0-6 months. Features snap closures for easy diaper changes and a cute animal print. Perfect for sensitive skin.",  
+  "category": "Baby Clothing",  
+  "seo_keywords": [  
+    "organic baby clothes",  
+    "cotton bodysuit infant",  
+    "newborn organic cotton",  
+    "baby clothes 0-6 months",  
+    "snap closure bodysuit",  
+    "sensitive skin baby clothes",  
+    "animal print baby outfit"  
+  ]  
+}  
+```  |
+
+This format breaks down how the SEO Keyword Enrichment strategy works, providing a simple explanation and an example of how it generates SEO keywords from product data.
+````
+
+</CodeGroup>
+
+## How to Get Started
+
+Log in to Netcore Unbxd Dashboard and navigate to **Manage** \> **Catalog** \> **Attribute Enrichment.**
+
+![Attri Enrich Gif Gi](/images/Attri_enrich_gif.gif)
+
+## Dashboard Keywords and Their Functionality
+
+**Attribute Enrichment** improves the discoverability of your products by ensuring that your product catalog has the necessary and complete attributes. There are three metrics of the **Attribute Enrichment**
+
+| **Metric**             | **Description**                                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Total Dimensions**   | The total number of attributes being tracked for enrichment in your product catalog.                               |
+| **Missing Dimensions** | The number of attributes that are currently missing or incomplete in the catalog and need to be enriched.          |
+| **Mapped Dimensions**  | The attributes that have been successfully mapped to the system, meaning they are linked and ready for enrichment. |
+
+This below section on the dashboard, helps you monitor the overall progress of your attribute enrichment process and provides clarity on which attributes are ready, which ones are missing, and how many are already mapped for enrichment.
+
+| **Section**             | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | **Use Case**                                                                                                                                                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Search**              | Allows you to search for specific attributes or products in the catalog. It helps quickly locate dimensions or attributes that need enrichment.                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                         |
+| **Rerun**               | Triggers the enrichment process again for attributes. This button is useful for refreshing or recalculating attribute data when necessary.                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                         |
+| **Filter**              | Opens the Filter Options, where you can apply filters based on the below:<br />1. **By State**: <br />- **Mapped**: Successfully linked to the system.<br />- **Unmapped**: Not yet linked. <br />- **Enriching**: In process. <br />- **Review**: Pending review. <br />- **Enriched**: Fully enriched. <br /><br />2. **By Category**: Filter by relevant product types. <br /><br />3. **By Type**: <br />-  **Metrics**: Numerical fields <br />-  **Info**: Descriptive fields |                                                                                                                                                                                                                                         |
+| **Enrich Attributes**   | Initiates the enrichment process for selected attributes. Clicking this automatically enriches missing or incomplete attributes using **AI-driven enhancements**.                                                                                                                                                                                                                                                                                                                   |                                                                                                                                                                                                                                         |
+| **Dimensions**          | Refers to standard attributes from **Google taxonomy** that should be present in your product catalog to enhance search performance.                                                                                                                                                                                                                                                                                                                                                | For a motorsports merchandiser with products like **trousers**, **tires**, **helmets**, and **e-bikes**, the **closure** attribute is only relevant for **trousers**, not for others like tires or helmets                              |
+| **Completeness**        | Indicates the progress or percentage of completion for the enrichment process. It refers to the percentage of products that have attribute values, calculated within the relevant categories.                                                                                                                                                                                                                                                                                       | If 60 out of 100 trousers have the **closure** attribute filled, the completeness for that attribute is **60%**.                                                                                                                        |
+| **Missing In Products** | Shows the number of products currently missing values for a specific attribute within relevant categories.                                                                                                                                                                                                                                                                                                                                                                          | If **closure** is missing in 40 out of 100 trousers, the **Missing in Products** column will show **40**, helping merchandisers track what needs enrichment.                                                                            |
+| **Status**              | Reflects the current stage of enrichment for an attribute.                                                                                                                                                                                                                                                                                                                                                                                                                          | **Types of status**: <br />- **Mapped**: Linked and ready for enrichment. <br />- **Unmapped**: Not yet linked. <br />- **Enriching**: In progress. <br />- **In Review**: Awaiting approval. <br />- **Complete**: Enrichment finished |
+| **Catalog Attributes**  | Refers to the catalog fields mapped to standard dimensions (e.g., Google attributes). This shows how internal fields align with global standards, improving structure and search optimization.                                                                                                                                                                                                                                                                                      | If a customer uses **prod_desc** for product descriptions, this column will show it mapped to **Product Description** (Google standard), helping merchandisers understand field alignment.                                              |
+|                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                         |
+
+<Info>
+  **Good to Know**
+
+  - **Google Taxonomy** is a structured classification system used by Google to categorize products in various categories for search and shopping purposes. It is a standardized list of product categories that help organize products and ensure they appear in relevant search results across Google services, such as Google Search, Google Shopping, and Google Ads.
+  - Metrics such as Dimensions, Completeness, and Missing Attributes, are calculated only for products in relevant categories.
+</Info>
+
+## Add New Enrichment
+
+![Attributeenrich Gi](/images/Attributeenrich.gif)
+
+1. On the Attribute Enrichment Dashboard, scroll on the Attribute listing page to click on **Enrich Attributes**.
+2. Select the \*\*Strategy \*\*that suit your requirement and click on **Next**.
+3. Configure your enrichment strategy and click **Preview**. Once **Preview** is generated, click on **Run on entire catalog** to proceed.
+4. Review generated attribute values in a sample set. You can download the enriched data file, make changes and re-upload it. Click on **Publish** to apply enriched data to the entire catalog.
+
+## FAQ & Troubleshooting
+
+<Accordion title="Can I apply enrichment to only a subset of products?">
+  Currently, enrichment is applied to all relevant products within a mapped category. However, you can use filters before running enrichment to narrow down which attributes or product types you want to focus on.
+</Accordion>
+
+<Accordion title="Does enrichment overwrite existing data?">
+  No. Enrichment is designed to fill in only missing or empty fields
+
+  . It will not overwrite existing attribute values unless explicitly configured to do so in a custom implementation.
+</Accordion>
+
+<Accordion title="Is manual review required after enrichment?">
+  While manual review is not mandatory, it is highly recommended
+
+  . You can review enriched outputs via the sample preview, download the file, make edits, and re-upload before publishing changes.
+</Accordion>
+
+<Accordion title="Can I export enriched attribute data?">
+  Yes. You can download enriched data
+
+   during the review stage before publishing, which lets you export, validate, or modify attribute values offline.
+</Accordion>
+
+<Accordion title="Is enrichment available for custom attributes?">
+  Yes. As long as your custom attribute is mapped correctly
+
+   to the system and is relevant to a product category, it can be enriched using any of the supported strategies.
+</Accordion>

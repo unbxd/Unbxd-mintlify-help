@@ -49,45 +49,85 @@ By understanding these scenarios, you can set up synonyms that reflect how your 
   <Tab title="Two-Way Synonyms">
     These synonyms are bi-directional. When a shopper searches for any of the terms in the group, the search engine returns results for all related terms.
 
-    **Example**\
+    **Example**
     If **"pants"** and **"trousers"** are set as two-way synonyms, a search for either will return results for both.
   </Tab>
   <Tab title="One-Way Synonyms">
     These are uni-directional. A search for the **primary keyword** returns results for its synonyms, but not vice versa.
 
-    **Example**\
+    **Example**
     If **"ivory"** is a one-way synonym for **"white"**, then:
 
     - Searching for **“white running shoes”** will return both **white** and **ivory** shoes.
     - Searching for **“ivory running shoes”** will only return **ivory** shoes, not white.
-</Tab>
+  </Tab>
 </Tabs>
-    ### **Configure Synonyms**
 
-    Now that we know various use cases and types of synonyms let us understand how to configure these synonyms using the Unbxd console. 
+### **Configure Synonyms**
 
-    **To add synonyms (or a single synonym)**:
+Now that we know various use cases and types of synonyms let us understand how to configure these synonyms using the Unbxd console. 
 
-    1. Navigate to **_Content \> Synonyms_**_._
-    2. Click **Add a Synonym** to configure your keywords along with the synonyms.
-    3. Provide keywords for Synonyms in the **Type Search Keyword section.**
-    4. Provide queries in**One-Way Synonyms ** and **Two-way Synonyms.**
-    5. Click**Proceed ** to**save ** the configure Synonyms.
+**To add synonyms (or a single synonym)**:
 
-       ### Bulk Upload Synonyms
+1. Navigate to **_Content \> Synonyms_**_._
+2. Click **Add a Synonym** to configure your keywords along with the synonyms.
+3. Provide keywords for Synonyms in the **Type Search Keyword section.**
+4. Provide queries in \*\*One-Way Synonyms \*\*and **Two-way Synonyms.**
+5. Click \*\*Proceed to \*\*save the configure Synonyms.
 
-       With the **Bulk Upload Synonyms** feature, you can upload a list of synonyms. You can browse on your computer or use drag-and-drop. The supported upload format is **_.csv_**_._ 
+   ### Bulk Upload Synonyms
 
-       > It is advisable for first-time users to upload a list of synonyms already known to their previous search system so that they can handle all those instances in Unbxd search. 
+   With the **Bulk Upload Synonyms** feature, you can upload a list of synonyms. You can browse on your computer or use drag-and-drop. The supported upload format is **_.csv_**_._ 
 
-    Once uploaded, you can see the number of synonyms added. Using the Bulk Download Synonyms feature, you can also bulk download all the synonyms you have configured. A .csv file is downloaded. 
+   > It is advisable for first-time users to upload a list of synonyms already known to their previous search system so that they can handle all those instances in Unbxd search. 
 
-    ### **Delete a synonym**:
- 
+Once uploaded, you can see the number of synonyms added. Using the Bulk Download Synonyms feature, you can also bulk download all the synonyms you have configured. A .csv file is downloaded.
+
+### **Delete a synonym**:
 
 1. Navigate to **_Content \> Synonyms_**.
 2. Search for the keyword and click the hamburger icon next to it. 
 3. Click **_Delete_**, where you will receive a confirmation message for deletion. 
 4. Click **_Yes_** if confirmed or **_No_** otherwise.
 
- 
+## **Index Time Synonyms**
+
+The **Index Time Synonym** feature is designed to improve search recall by adding synonym keywords to the search index during the **full feed** or **re-indexing** process. These synonyms help to map multiple terms with the same meaning, ensuring that users can find relevant products, even if they use different words in their search queries.
+
+### **Prerequisites**
+
+Before using the Index Time Synonyms feature, ensure that the following prerequisites are met:
+
+1. Configure your synonym relationships in the dashboard.
+2. This feature is applied during the full feed or re-indexing process, meaning the system will only index synonyms when a feed is ingested or a re-indexing job is triggered.
+
+### **How it works**
+
+This feature is accessible only to Unbxd Admin users. Log in to Netcore Unbxd Dashboard and navigate to **Algorithm** \> **Content**\> **Synonym**.
+
+Below is step by step workflow on Index Time Synonym:
+
+| Step                                                   | Description                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Synonym Mapping Input**                              | Merchandisers define synonym relationships through the dashboard. **Examples** <br />• _Unidirectional Synonyms_: `"pants → trousers, slacks, long briefs"`<br />• _Bidirectional Synonyms_: `"pants ↔ trousers ↔ slacks ↔ long briefs"` These mappings are then passed to the backend system for indexing.                                                              |
+| **Building the Inverted Synonym Trie**                 | During feed ingestion, the system constructs an inverted synonym mapping based on the configured relationships. **Examples**: <br />• _Unidirectional_: `"trousers → pants"`, `"slacks → pants"`, `"long briefs → pants"` <br />• _Bidirectional_: `"trousers → pants, slacks, long briefs"`, `"pants → trousers, slacks, long briefs"`, and so on.                      |
+| **Synonym Transformer Processing**                     | The Synonym Transformer processes searchable fields (like product titles and descriptions) using a maximum window size of 3 words.<br /><br /> **Note**: Only **Single-token synonyms** are indexed. Multi-word synonyms (e.g., `"long briefs"`) are ignored.                                                                                                            |
+| **Indexing into **`syn_unx_tpm`**and ** `syn_unx_auto` | Valid single-token synonyms are indexed into: <br />• `syn_unx_tpm` → for search queries <br />• `syn_unx_auto` → for autosuggest queries <br /><br />**Example**: If the product title is `"slacks"` and the mapping is `"pants → slacks"`, then `"pants"` is indexed into `syn_unx_tpm`<br /><br />**Note**: Multi-word synonyms like `"long briefs"` are not indexed. |
+
+## FAQ & Troubleshoot
+
+<Accordion title="When should I use Index Time Synonym?">
+  Index Time Synonym is best used when you have a large number of synonyms to be indexed (e.g., 25\+). It’s particularly useful during the onboarding process as feeds are indexed regularly.
+</Accordion>
+
+<Accordion title="Can I index multi-word synonyms?">
+  No, the system only processes and indexes single-token synonyms (e.g., "pants" → "slacks"). Multi-word synonyms like "long briefs" are not indexed to avoid noise in the system.
+</Accordion>
+
+<Accordion title="What happens if I add synonyms after the feed is ingested?">
+  If you add new synonyms after a feed has already been ingested, they will be indexed only during the next full feed or re-indexing cycle.
+</Accordion>
+
+<Accordion title="How often should I refresh the synonyms?">
+  Synonyms are typically refreshed during full feeds or delta feeds, which are indexed regularly. Ensure the feed is ingested at appropriate intervals to keep the synonym mappings up-to-date.
+</Accordion>
