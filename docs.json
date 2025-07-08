@@ -63,7 +63,8 @@
                   "user-guides/merchandising/promotions/pin",
                   "user-guides/merchandising/promotions/sort",
                   "user-guides/merchandising/promotions/slot",
-                  "user-guides/merchandising/promotions/filter"
+                  "user-guides/merchandising/promotions/filter",
+                  "user-guides/merchandising/promotions/ai-suggested-redirects"
                 ]
               },
               {
@@ -71,7 +72,10 @@
                  "pages": [
                    "user-guides/SearchPreview/AI-meta-data",
 				   "user-guides/SearchPreview/ProductCardMapping",
-				   "user-guides/SearchPreview/VisualSearch"
+				   "user-guides/SearchPreview/VisualSearch",
+                   "user-guides/SearchPreview/Attribute-Enrichment",
+                   "user-guides/SearchPreview/Product-Badging",
+                   "user-guides/SearchPreview/Shopping-Assistant"
                  ]
               },
 			  {
@@ -131,18 +135,20 @@
         ]
       },
       {
-        "tab": "What's New",
+        "tab": "Introduction",
         "groups": [
           {
             "group": "Onboarding",
             "pages": [
-              "GettingStarted/Introduction"
+              "GettingStarted/Introduction",
+              "GettingStarted/2fa",
+              "GettingStarted/2fa-faqs"
             ]
           }
         ]
       },
 	  {
-        "tab": "Introduction",
+        "tab": "What's New",
         "groups": [
           {
             "group": "Merchandising Workbench",
