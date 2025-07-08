@@ -101,7 +101,9 @@
                   "user-guides/merchandising/Algorithms/Content/Co",
                   "user-guides/merchandising/Algorithms/Content/Phrase",
                   "user-guides/merchandising/Algorithms/Content/Synonyms",
-                  "user-guides/merchandising/Algorithms/Content/Stemming"
+                  "user-guides/merchandising/Algorithms/Content/Stemming",
+                  "user-guides/merchandising/Algorithms/Content/Spell-Check-Override"
+                  
                 ]
               },
               {
