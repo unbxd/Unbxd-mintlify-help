@@ -71,7 +71,9 @@
                  "pages": [
                    "user-guides/SearchPreview/AI-meta-data",
 				   "user-guides/SearchPreview/ProductCardMapping",
-				   "user-guides/SearchPreview/VisualSearch"
+				   "user-guides/SearchPreview/VisualSearch",
+                   "user-guides/SearchPreview/Attribute-Enrichment",
+                   "user-guides/SearchPreview/ProductCardMapping"
                  ]
               },
 			  {
@@ -103,7 +105,6 @@
                   "user-guides/merchandising/Algorithms/Content/Synonyms",
                   "user-guides/merchandising/Algorithms/Content/Stemming",
                   "user-guides/merchandising/Algorithms/Content/Spell-Check-Override"
-                  
                 ]
               },
               {
@@ -131,18 +132,20 @@
         ]
       },
       {
-        "tab": "What's New",
+        "tab": "Introduction",
         "groups": [
           {
             "group": "Onboarding",
             "pages": [
-              "GettingStarted/Introduction"
+              "GettingStarted/Introduction",
+              "GettingStarted/2fa",
+              "GettingStarted/2fa-faqs",
             ]
           }
         ]
       },
 	  {
-        "tab": "Introduction",
+        "tab": "What's New",
         "groups": [
           {
             "group": "Merchandising Workbench",
