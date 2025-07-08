@@ -1,0 +1,42 @@
+---
+title: "Azure Registration for SSO Login"
+description: "Description of your new file."
+---
+
+# Overview
+
+Azure Active Directory (Azure AD) registration allows Unbxd to integrate with SSO (Single Sign-On) for secure user authentication. This process enables the customer to authenticate users through Azure AD without requiring separate credentials for Unbxd. The configuration involves registering the Unbxd application in the Azure portal and finalizing settings in the Unbxd console.
+
+<Note>
+  Azure Registration will be done by the Customer support team. Netcore Unbxd **do not** have access to their Azure Active Directory
+</Note>
+
+## Registration Steps
+
+1. **Steps to Register Application in Azure Portal**
+
+   Navigate to Enterprise applications in Azure AD. Go to **Azure Active Directory** \> **Enterprise Applications**. Click on Click **New application** \> **Create your own application**. Give a name for the application **Unbxd SSO** and select the **Integrate any other application you don’t find in the gallery (Non-gallery)** option. Click **Create**.
+2. **Configure Single Sign-On (SSO)**
+
+Once the application is created, navigate to **Single Sign-On**\>  **SAML**. In Basic SAML Configuration, enter the following details from the Unbxd console:
+
+### SAML Configuration Fields
+
+| **Field**                                      | **Description**                                                                                                                                               |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Identifier (Entity ID)**                     | A unique identity that identifies the service provider (Unbxd) in SAML transactions. Example: `Unbxd_SSO`\<br\>It could be anything but must match the field. |
+| **Reply URL (Assertion Consumer Service URL)** | The endpoint where Azure AD sends the authentication response after a successful sign-in.\<br\>Example: `https://console.unbxd.io/login/callback/`            |
+| **(Optional) Sign-on URL**                     | The URL where users can initiate the login process.\<br\>Example: `https://your-unbxd-app.com/login`                                                          |
+| **Attributes & Claims**                        | Claim **emailaddress** should be preset and point to the user's email ID.                                                                                     |
+
+3. **Assign Users and Groups**
+
+   Navigate to Users and Groups in the Azure AD portal. Click **Add user/group**. Select the users or groups that should have access to Unbxd via SSO. Click **Assign**.
+4. **Finalize Configuration in Unbxd**
+
+Log in to your Unbxd account. Navigate to SSO Settings under profile.
+
+- Ensure the **App federation Metadata URL** from Azure AD is mapped to **Metadata URL** in the Netcore Unbxd panel.
+- Ensure the **Login URL** from Azure AD is mapped to **Login URL** in the Netcore Unbxd panel.
+
+Save the configuration and test the login.
