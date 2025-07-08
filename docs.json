@@ -141,6 +141,8 @@
             "group": "Onboarding",
             "pages": [
               "GettingStarted/Introduction",
+              "GettingStarted/LoginMethods",
+              "GettingStarted/SSO",
               "GettingStarted/2fa",
               "GettingStarted/2fa-faqs"
             ]
